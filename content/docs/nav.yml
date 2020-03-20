@@ -1,0 +1,5 @@
+- title: Docs
+  items:
+    - id: getting-started
+      title: Getting Started
+      isOrdered: true

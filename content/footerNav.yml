@@ -1,0 +1,22 @@
+docs:
+  title: Docs
+
+legal:
+  title: Legal
+  items:
+    - title: Term of Service
+      to: /legal/terms-of-service
+    - title: Privacy Policy
+      to: /legal/privacy-policy
+    - title: Cookie Policy
+      to: /legal/cookie-policy
+    - title: Standard Agreement
+      to: /legal/standard-agreement
+
+more:
+  title: More
+  items:
+    - title: Blog
+      to: /blog
+    - title: Compliance Analyzer
+      to: /compliance-analyzer
