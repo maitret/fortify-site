@@ -2,6 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Layout } from "antd"
 import { colors } from "../../theme"
+import LayoutHeader from "../LayoutHeader/Header"
+import PageLayoutCSS from "./PageLayout.scss"
 
 const { Header, Footer, Content } = Layout
 
@@ -12,7 +14,7 @@ const PageLayout = ({ children }) => (
       backgroundColor: colors.black,
     }}
   >
-    <Header>Navbar goes here</Header>
+    <LayoutHeader />
     <Content>{children}</Content>
     <Footer>Footer goes here</Footer>
   </Layout>

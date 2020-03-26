@@ -3,6 +3,9 @@ import { graphql } from "gatsby"
 import SEO from "../components/Seo"
 import { PageLayout } from "../components/Layout"
 import { useDrift } from "../components/Drift"
+import HomeHeroSection from "../components/HomeHeroSection"
+
+import BackgroundLines from "../svg/background-lines.svg"
 import configs from "../../site-config"
 
 const IndexPage = ({ data }) => {
@@ -15,7 +18,17 @@ const IndexPage = ({ data }) => {
         keywords={configs.app_keywords}
         title={configs.app_subtitle_short}
       />
-      <button onClick={openSidebar}>chat</button>
+      <div
+        css={{
+          paddingTop: "80px",
+          height: "800px",
+          background: "#000",
+          backgroundImage: "url(" + BackgroundLines + ")",
+        }}
+      >
+        <HomeHeroSection />
+      </div>
+      {/* <button onClick={openSidebar}>chat</button> */}
     </PageLayout>
   )
 }

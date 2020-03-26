@@ -13,15 +13,15 @@ const Header = ({ location }) => {
   return (
     <header
       css={{
-        backgroundColor: colors.white,
+        backgroundColor: colors.black,
         color: colors.darker,
         position: "fixed",
         zIndex: 1,
         width: "100%",
         top: 0,
         left: 0,
-        boxShadow: "2px 0px 10px 1px #aaaaaa",
-        padding: 10,
+        right: 0,
+        padding: "0 30px",
         "@media print": {
           display: "none",
         },
@@ -32,6 +32,7 @@ const Header = ({ location }) => {
           css={{
             display: "flex",
             flexDirection: "row",
+            justifyContent: "space-between",
             alignItems: "center",
             height: 60,
             [media.lessThan("xsmall")]: {
@@ -90,7 +91,6 @@ const Header = ({ location }) => {
 
           <nav
             css={{
-              flex: "1",
               display: "flex",
               flexDirection: "row",
               alignItems: "stretch",
@@ -119,59 +119,11 @@ const Header = ({ location }) => {
               },
             }}
           >
-            {navHeader.items.map(link => (
-              <HeaderLink
-                key={link.title}
-                isActive={
-                  location && location.pathname.includes(link.activeSelector)
-                }
-                title={link.title}
-                to={link.to}
-              />
-            ))}
+            <HeaderLink title="Features" to="#" />
+            <HeaderLink title="Download" to="#" />
+            <HeaderLink title="Resources" to="#" />
+            <HeaderLink title="Pricing" to="#" />
           </nav>
-
-          <DocSearch />
-
-          <div
-            css={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-end",
-              width: "auto",
-            }}
-          >
-            <button
-              css={{
-                [media.size("xsmall")]: {
-                  paddingLeft: 0,
-                },
-              }}
-              className="button is-primary is-outlined"
-              onClick={openSidebar}
-            >
-              <strong
-                css={{
-                  [media.size("xsmall")]: {
-                    display: "none",
-                  },
-                }}
-              >
-                Have a question?
-              </strong>
-              <span
-                css={{
-                  [media.size("xsmall")]: {
-                    position: "relative",
-                    left: -5,
-                  },
-                }}
-                className="icon"
-              >
-                <i className="fas fa-comment-dots" />
-              </span>
-            </button>
-          </div>
         </div>
       </div>
     </header>

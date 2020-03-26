@@ -14,6 +14,7 @@ module.exports = {
     "MarkdownRemark.frontmatter.author": "AuthorYaml",
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-emotion",
     "gatsby-transformer-authors-yaml",

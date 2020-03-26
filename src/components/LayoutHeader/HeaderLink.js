@@ -13,12 +13,13 @@ const style = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  color: colors.darker,
+  color: colors.white,
   transition: "color 0.2s ease-out",
   paddingLeft: 15,
   paddingRight: 15,
   fontWeight: 300,
   textDecoration: "none",
+  fontSize: "17px",
 
   ":focus": {
     outline: 0,
