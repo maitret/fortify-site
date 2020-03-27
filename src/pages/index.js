@@ -4,8 +4,8 @@ import SEO from "../components/Seo"
 import { PageLayout } from "../components/Layout"
 import { useDrift } from "../components/Drift"
 import HomeHeroSection from "../components/HomeHeroSection"
+import HomeFeaturesSection from "../components/HomeFeaturesSection"
 
-import BackgroundLines from "../svg/background-lines.svg"
 import configs from "../../site-config"
 
 const IndexPage = ({ data }) => {
@@ -21,12 +21,11 @@ const IndexPage = ({ data }) => {
       <div
         css={{
           paddingTop: "80px",
-          height: "800px",
           background: "#000",
-          backgroundImage: "url(" + BackgroundLines + ")",
         }}
       >
         <HomeHeroSection />
+        <HomeFeaturesSection />
       </div>
       {/* <button onClick={openSidebar}>chat</button> */}
     </PageLayout>

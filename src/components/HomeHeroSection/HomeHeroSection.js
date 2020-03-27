@@ -1,6 +1,8 @@
 import React from "react"
 import Flex from "../Flex"
 import WindowsLogo from "../../svg/windows-logo.svg"
+import ScreenShot from "../../images/screenshot-background.png"
+import BackgroundLines from "../../svg/background-lines.svg"
 
 const HomeHeroSection = () => {
   return (
@@ -8,14 +10,18 @@ const HomeHeroSection = () => {
       id="hero__section"
       className="hero__section"
       halign="center"
+      direction="column"
       css={{
-        padding: "50px 0",
+        backgroundImage: "url(" + BackgroundLines + ")",
       }}
     >
       <Flex
         className="hero__section__container"
         direction="column"
         halign="center"
+        css={{
+          padding: "50px 0",
+        }}
       >
         <h1
           css={{
@@ -84,6 +90,29 @@ const HomeHeroSection = () => {
             Other platforms
           </a>
         </Flex>
+      </Flex>
+
+      <Flex
+        className="herro__section__screenshot"
+        css={{
+          maxWidth: "95%",
+          padding: "3rem 0",
+        }}
+      >
+        <div
+          css={{
+            boxShadow: " 0 30px 180px 0 rgba(35,38,60,.9)",
+            border: "1px solid #23263c",
+          }}
+        >
+          <img
+            src={ScreenShot}
+            alt="screeenshot"
+            css={{
+              width: "100%",
+            }}
+          />
+        </div>
       </Flex>
     </Flex>
   )
