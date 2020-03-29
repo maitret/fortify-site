@@ -1,6 +1,6 @@
 import HeaderLink from "./HeaderLink"
 import { Link } from "gatsby"
-import React from "react"
+import React, { useState } from "react"
 import { colors, media } from "../../theme"
 import DocSearch from "./DocSearch"
 import { useDrift } from "../Drift"
@@ -8,8 +8,8 @@ import navHeader from "../../../content/headerNav.yml"
 import logoPng from "../../../static/icon.png"
 
 const Header = ({ location }) => {
-  const [, openSidebar] = useDrift()
-
+  // const [, openSidebar] = useDrift()
+  const [menuOpened, setMenuOpened] = useState(false)
   return (
     <header
       css={{
@@ -89,6 +89,59 @@ const Header = ({ location }) => {
             </span>
           </Link>
 
+          <div
+            onClick={() => setMenuOpened(!menuOpened)}
+            css={{
+              fontSize: "12px",
+              color: "#fff",
+              cursor: "pointer",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
+              minWidth: "25px",
+              minHeight: "25px",
+              transition: "300ms all ease",
+              "@media (min-width:980px)": {
+                display: "none!important",
+              },
+            }}
+          >
+            <span
+              css={{
+                display: "flex",
+                background: "#fff",
+                height: "1px",
+                width: "20px",
+                margin: "2px 0",
+                transition: "100ms all ease",
+                transform: menuOpened ? "rotate(40deg)" : "rotate(0deg)",
+                position: menuOpened ? "absolute" : "initial",
+              }}
+            />
+            <span
+              css={{
+                display: !menuOpened ? "flex" : "none!important",
+                background: "#fff",
+                height: "1px",
+                width: "20px",
+                margin: "2px 0",
+              }}
+            />
+            <span
+              css={{
+                display: "flex",
+                background: "#fff",
+                height: "1px",
+                width: "20px",
+                margin: "2px 0",
+                transition: "100ms all ease",
+                transform: menuOpened ? "rotate(-40deg)" : "rotate(0deg)",
+                position: menuOpened ? "absolute" : "initial",
+              }}
+            />
+          </div>
           <nav
             css={{
               display: "flex",
@@ -113,9 +166,21 @@ const Header = ({ location }) => {
               [media.greaterThan("xlarge")]: {
                 width: null,
               },
-              [media.lessThan("small")]: {
-                maskImage:
-                  "linear-gradient(to right, transparent, black 20px, black 90%, transparent)",
+              // [media.lessThan("small")]: {
+              //   maskImage:
+              //     "linear-gradient(to right, transparent, black 20px, black 90%, transparent)",
+              // },
+              "@media (max-width:980px)": {
+                display: !menuOpened ? "none!important" : "flex!important",
+                position: "fixed",
+                top: "60px",
+                right: 0,
+                left: 0,
+                bottom: 0,
+                background: "#000",
+                justifyContent: "flex-start",
+                alignItems: "flex-end",
+                flexDirection: "column",
               },
             }}
           >

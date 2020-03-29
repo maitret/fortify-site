@@ -1,8 +1,11 @@
 import React from "react"
 import Flex from "../Flex"
 import WindowsLogo from "../../svg/windows-logo.svg"
+import AppleLogo from "../../svg/apple-logo.svg"
+import LinuxLogo from "../../svg/linux-logo.svg"
 import ScreenShot from "../../images/screenshot-background.png"
 import BackgroundLines from "../../svg/background-lines.svg"
+import { media } from "../../theme"
 
 const HomeHeroSection = () => {
   return (
@@ -30,7 +33,7 @@ const HomeHeroSection = () => {
             fontSize: "46px",
           }}
         >
-          Runlet
+          Networkchip
         </h1>
         <p
           css={{
@@ -40,6 +43,10 @@ const HomeHeroSection = () => {
             fontWeight: "600",
             textAlign: "center",
             lineHeight: "40px",
+            [media.size("xsmall")]: {
+              fontSize: "1.4rem!important",
+              lineHeight: "25px!important",
+            },
           }}
         >
           A cloud-based job manager that integrates your devices.
@@ -52,28 +59,42 @@ const HomeHeroSection = () => {
             marginTop: "15px",
           }}
         >
-          <img src={WindowsLogo} />
-          <button
-            css={{
-              margin: "25px 0",
-              backgroundColor: "#1e2134",
-              borderColor: "transparent",
-              color: "#fff",
-              borderRadius: "290486px",
-              fontSize: "24px",
-              fontWeight: "bold",
-              padding: "0.3em 1em",
-              outline: "none",
-              cursor: "pointer",
-              transition: "200ms all ease",
-              ":hover": {
-                backgroundColor: "#afaea4",
-                color: "#404040",
-              },
-            }}
-          >
-            Download for windows
-          </button>
+          <Flex direction="column" halign="center">
+            <div>
+              {[AppleLogo, LinuxLogo, WindowsLogo].map(image => (
+                <img
+                  css={{
+                    margin: "0 5px",
+                  }}
+                  src={image}
+                />
+              ))}
+            </div>
+            <button
+              css={{
+                margin: "25px 0",
+                backgroundColor: "#1e2134",
+                borderColor: "transparent",
+                color: "#fff",
+                borderRadius: "290486px",
+                fontSize: "24px",
+                fontWeight: "bold",
+                padding: "0.3em 1em",
+                outline: "none",
+                cursor: "pointer",
+                transition: "200ms all ease",
+                ":hover": {
+                  backgroundColor: "#afaea4",
+                  color: "#404040",
+                },
+                [media.size("xsmall")]: {
+                  display: "none!important",
+                },
+              }}
+            >
+              Download for windows
+            </button>
+          </Flex>
           <a
             href="#"
             css={{
@@ -84,6 +105,9 @@ const HomeHeroSection = () => {
               ":hover": {
                 color: "#fff",
                 borderColor: "#fff",
+              },
+              [media.size("xsmall")]: {
+                marginTop: "50px!important",
               },
             }}
           >

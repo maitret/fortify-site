@@ -5,7 +5,10 @@ import { PageLayout } from "../components/Layout"
 import { useDrift } from "../components/Drift"
 import HomeHeroSection from "../components/HomeHeroSection"
 import HomeFeaturesSection from "../components/HomeFeaturesSection"
+import HomePricingSection from "../components/HomePricingSection"
+import HomeResourcesSection from "../components/HomeResourcesSection"
 
+import { media } from "../theme"
 import configs from "../../site-config"
 
 const IndexPage = ({ data }) => {
@@ -22,10 +25,15 @@ const IndexPage = ({ data }) => {
         css={{
           paddingTop: "80px",
           background: "#000",
+          [media.size("xsmall")]: {
+            paddingTop: "60px",
+          },
         }}
       >
         <HomeHeroSection />
         <HomeFeaturesSection />
+        <HomePricingSection />
+        <HomeResourcesSection />
       </div>
       {/* <button onClick={openSidebar}>chat</button> */}
     </PageLayout>

@@ -1,6 +1,5 @@
 import React from "react"
 import Flex from "../Flex"
-import { media } from "../../theme"
 
 const HomeSquareItemContent = ({ logo, title, text }) => {
   return (
@@ -25,9 +24,6 @@ const HomeSquareItemContent = ({ logo, title, text }) => {
             fontSize: "2rem",
             fontWeight: "700",
             marginBottom: "5px",
-            [media.size("xsmall")]: {
-              lineHeight: "2.1rem!important",
-            },
           }}
         >
           {title}
@@ -40,9 +36,6 @@ const HomeSquareItemContent = ({ logo, title, text }) => {
             color: "#9ea1b8",
             fontSize: "1.125rem",
             maxWidth: "300px",
-            [media.size("xsmall")]: {
-              marginTop: "15px!important",
-            },
           }}
         >
           {text}

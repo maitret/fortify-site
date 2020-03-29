@@ -2,7 +2,11 @@ import React from "react"
 import Flex from "../Flex"
 import HomeSquareItem from "./HomeSquareItem"
 import HomeSquareItemContent from "./HomeSquareItemContent"
+import HomeSectionHeader from "../HomeSectionHeader"
+import HomeSectionLargeText from "../HomeSectionLargeText"
 import ScreenShotSmall from "../../images/screenshot-small.png"
+import { media } from "../../theme"
+
 import {
   Themes,
   SmallLogo,
@@ -20,7 +24,7 @@ const HomeFeaturesSection = () => {
       halign="center"
       direction="column"
       css={{
-        padding: "9rem 1.5rem;",
+        padding: "2.5rem 1.5rem;",
         backgroundImage: "linear-gradient(180deg, transparent,#0b0d1b)",
       }}
     >
@@ -43,47 +47,36 @@ const HomeFeaturesSection = () => {
             direction="column"
             css={{
               width: "83.333%",
+              [media.size("xsmall")]: {
+                width: "100%!important",
+              },
             }}
           >
-            <span
-              css={{
-                fontSize: "1rem",
-                color: "#9ea1b8",
-                fontWeight: "bold",
-                marginBottom: "1.5rem",
-              }}
-            >
-              # FEATURES
-            </span>
-            <p
-              css={{
-                fontSize: "3rem",
-                letterSpacing: "-.06em",
-                background: "-webkit-linear-gradient(#f2f4f8,#7a80b1)",
-                WebkitBackgroundClip: "text!important",
-                WebkitTextFillColor: "transparent",
-                fontWeight: "700",
-                lineHeight: "1.2",
-              }}
-            >
-              Runlet is a cloud-based job manager that offers device
+            <HomeSectionHeader text="# FEATURES" />
+            <HomeSectionLargeText
+              text="Networkchip is a cloud-based job manager that offers device
               synchronization and reliable message delivery in a network of
-              connected devices even after connectivity issues.
-            </p>
+              connected devices even after connectivity issues."
+            />
           </Flex>
         </Flex>
 
         <Flex
           className="features__section__features"
+          valign="stretch"
           css={{
             color: "#f2f4f8",
-            height: "840px",
+            [media.size("xsmall")]: {
+              flexDirection: "column!important",
+            },
           }}
         >
           <div
             css={{
               width: "58%",
-              height: "100%",
+              [media.size("xsmall")]: {
+                width: "100%!important",
+              },
             }}
           >
             <div
@@ -97,6 +90,9 @@ const HomeFeaturesSection = () => {
                 css={{
                   width: "100%",
                   height: "100%",
+                  [media.size("xsmall")]: {
+                    display: "none!important",
+                  },
                 }}
               >
                 <div
@@ -206,7 +202,9 @@ const HomeFeaturesSection = () => {
           <div
             css={{
               width: "42%",
-              height: "100%",
+              [media.size("xsmall")]: {
+                width: "100%!important",
+              },
             }}
             className="features__section__right"
           >

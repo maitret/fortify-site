@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Layout } from "antd"
 import { colors } from "../../theme"
 import LayoutHeader from "../LayoutHeader/Header"
+import LayoutFooter from "../LayoutFooter/Footer"
 import PageLayoutCSS from "./PageLayout.scss"
 
 const { Header, Footer, Content } = Layout
@@ -11,12 +12,12 @@ const PageLayout = ({ children }) => (
   <Layout
     css={{
       minHeight: "100vh",
-      backgroundColor: colors.black,
+      backgroundColor: "#0a0c19",
     }}
   >
     <LayoutHeader />
     <Content>{children}</Content>
-    <Footer>Footer goes here</Footer>
+    <LayoutFooter />
   </Layout>
 )
 

@@ -13,6 +13,10 @@ const FooterNav = ({ children, title, layoutHasSidebar = false }) => (
         paddingTop: 0,
         width: "25%",
       },
+      [media.size("xsmall")]: {
+        marginRight: "0!important",
+        alignItems: "center",
+      },
     }}
   >
     <div

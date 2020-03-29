@@ -1,8 +1,8 @@
-import React from "react"
+import React, { Fragment } from "react"
 import Flex from "../Flex"
 import { media } from "../../theme"
 
-const HomeSquareItem = ({ children, backgroundColor, title }) => {
+const Content = ({ title, backgroundColor, children }) => {
   return (
     <Flex
       css={{
@@ -15,8 +15,8 @@ const HomeSquareItem = ({ children, backgroundColor, title }) => {
         flexShrink: 1,
         minHeight: "min-content",
         [media.size("xsmall")]: {
-          paddingLeft: "0",
-          paddingRight: "0",
+          paddingLeft: "0!important",
+          paddingRight: "0!important",
         },
       }}
     >
@@ -41,6 +41,7 @@ const HomeSquareItem = ({ children, backgroundColor, title }) => {
         }}
       >
         {children}
+
         {title && (
           <span
             css={{
@@ -60,6 +61,33 @@ const HomeSquareItem = ({ children, backgroundColor, title }) => {
         )}
       </Flex>
     </Flex>
+  )
+}
+
+const HomeSquareItem = ({ children, backgroundColor, title, link = null }) => {
+  return (
+    <Fragment>
+      {link ? (
+        <a
+          css={{
+            display: "flex",
+            width: "100%",
+            height: "100%",
+            color: "inherit!important",
+          }}
+          target="_blank"
+          href={link}
+        >
+          <Content backgroundColor={backgroundColor} title={title}>
+            {children}
+          </Content>
+        </a>
+      ) : (
+        <Content backgroundColor={backgroundColor} title={title}>
+          {children}
+        </Content>
+      )}
+    </Fragment>
   )
 }
 

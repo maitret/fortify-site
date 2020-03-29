@@ -44,6 +44,10 @@ const style = {
       color: colors.brand,
     },
   },
+  "@media (max-width:980px)": {
+    fontSize: "1.6rem",
+    paddingRight: "30px",
+  },
 }
 
 const activeStyle = {
