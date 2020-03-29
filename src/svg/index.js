@@ -13,6 +13,8 @@ import Github from "./github.svg"
 import Exit from "./exit.svg"
 import LinuxLogo from "./linux-logo.svg"
 import AppleLogo from "./apple-logo.svg"
+import WindowsLogo from "./windows-logo.svg"
+import BackgroundLines from "./background-lines.svg"
 
 export {
   Themes,
@@ -30,4 +32,6 @@ export {
   Exit,
   LinuxLogo,
   AppleLogo,
+  WindowsLogo,
+  BackgroundLines,
 }

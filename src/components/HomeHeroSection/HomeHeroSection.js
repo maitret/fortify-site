@@ -1,10 +1,7 @@
 import React from "react"
 import Flex from "../Flex"
-import WindowsLogo from "../../svg/windows-logo.svg"
-import AppleLogo from "../../svg/apple-logo.svg"
-import LinuxLogo from "../../svg/linux-logo.svg"
+import { WindowsLogo, AppleLogo, LinuxLogo, BackgroundLines } from "../../svg"
 import ScreenShot from "../../images/screenshot-background.png"
-import BackgroundLines from "../../svg/background-lines.svg"
 import { media } from "../../theme"
 
 const HomeHeroSection = () => {
@@ -15,7 +12,7 @@ const HomeHeroSection = () => {
       halign="center"
       direction="column"
       css={{
-        backgroundImage: "url(" + BackgroundLines + ")",
+        backgroundImage: `url(${BackgroundLines})`,
       }}
     >
       <Flex
