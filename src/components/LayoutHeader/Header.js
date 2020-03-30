@@ -103,7 +103,7 @@ const Header = ({ location }) => {
               minWidth: "25px",
               minHeight: "25px",
               transition: "300ms all ease",
-              "@media (min-width:980px)": {
+              [media.greaterThan("large")]: {
                 display: "none!important",
               },
             }}
@@ -158,7 +158,6 @@ const Header = ({ location }) => {
               "::-webkit-scrollbar": {
                 display: "none",
               },
-
               [media.size("xsmall")]: {
                 flexGrow: "1",
                 width: "auto",
@@ -166,11 +165,7 @@ const Header = ({ location }) => {
               [media.greaterThan("xlarge")]: {
                 width: null,
               },
-              // [media.lessThan("small")]: {
-              //   maskImage:
-              //     "linear-gradient(to right, transparent, black 20px, black 90%, transparent)",
-              // },
-              "@media (max-width:980px)": {
+              [media.lessThan("large")]: {
                 display: !menuOpened ? "none!important" : "flex!important",
                 position: "fixed",
                 top: "60px",

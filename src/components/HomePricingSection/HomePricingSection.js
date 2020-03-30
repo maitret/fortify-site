@@ -4,7 +4,7 @@ import HomePricingTableItem from "./HomePricingTableItem"
 import HomeSectionLargeText from "../HomeSectionLargeText"
 import HomeSectionHeader from "../HomeSectionHeader"
 
-import { media } from "../../theme"
+import { media, colors } from "../../theme"
 
 import { Check, Unchecked } from "../../svg"
 
@@ -39,8 +39,8 @@ const HomePricingSection = () => {
             direction="column"
             css={{
               width: "83.333%",
-              [media.size("xsmall")]: {
-                width: "100%!important",
+              [media.lessThan("medium")]: {
+                width: "100%",
               },
             }}
           >
@@ -95,7 +95,7 @@ const HomePricingSection = () => {
               width: "33%",
               boxShadow: "0 10px 60px 0 rgba(158,161,184,.4)",
               [media.size("xsmall")]: {
-                display: "none!important",
+                width: "45%!important",
               },
             }}
           />
@@ -123,29 +123,43 @@ const HomePricingSection = () => {
               width: "28%",
               boxShadow: "0 10px 60px 0 rgba(158,161,184,.4)",
               [media.size("xsmall")]: {
-                flex: "1!important",
+                width: "30%!important",
+                margin: "0 5px",
               },
             }}
           />
           <HomePricingTableItem
             title="Basic"
             price={
-              <Fragment>
-                <span
-                  css={{
-                    fontSize: "1rem",
-                    fontWeight: 400,
-                  }}
-                >
-                  $
-                </span>
-                <span
-                  css={{
-                    color: "#23263c",
-                  }}
-                >
-                  TBA
-                </span>
+              <Flex
+                halign="center"
+                valign="center"
+                css={{
+                  [media.size("xsmall")]: {
+                    textAlign: "center",
+                    flexDirection: "column!important",
+                    alignItems: "center!important",
+                    lineHeight: "23.1px",
+                  },
+                }}
+              >
+                <Flex>
+                  <span
+                    css={{
+                      fontSize: "1rem",
+                      fontWeight: 400,
+                    }}
+                  >
+                    $
+                  </span>
+                  <span
+                    css={{
+                      color: colors.greyBlue,
+                    }}
+                  >
+                    TBA
+                  </span>
+                </Flex>
                 <span
                   css={{
                     fontSize: "1rem",
@@ -154,7 +168,7 @@ const HomePricingSection = () => {
                 >
                   /month
                 </span>
-              </Fragment>
+              </Flex>
             }
             contentItems={[
               10,
@@ -184,6 +198,9 @@ const HomePricingSection = () => {
                     color: "#a5a5a5",
                     cursor: "not-allowed",
                   },
+                  [media.size("xsmall")]: {
+                    fontSize: "14px",
+                  },
                 }}
               >
                 Coming soon
@@ -194,8 +211,7 @@ const HomePricingSection = () => {
               marginTop: "-9px",
               boxShadow: "0 10px 60px 0 rgba(158,161,184,.4)",
               [media.size("xsmall")]: {
-                flex: "2!important",
-                marginLeft: "5px",
+                width: "30%!important",
               },
             }}
           />

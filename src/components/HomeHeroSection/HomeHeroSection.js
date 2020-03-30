@@ -2,7 +2,7 @@ import React from "react"
 import Flex from "../Flex"
 import { WindowsLogo, AppleLogo, LinuxLogo, BackgroundLines } from "../../svg"
 import ScreenShot from "../../images/screenshot-background.png"
-import { media } from "../../theme"
+import { media, colors } from "../../theme"
 
 const HomeHeroSection = () => {
   return (
@@ -58,14 +58,30 @@ const HomeHeroSection = () => {
         >
           <Flex direction="column" halign="center">
             <div>
-              {[AppleLogo, LinuxLogo, WindowsLogo].map(image => (
-                <img
-                  css={{
-                    margin: "0 5px",
-                  }}
-                  src={image}
-                />
-              ))}
+              <img
+                css={{
+                  margin: "0 5px",
+                  [media.greaterThan("large")]: {
+                    display: "none!important",
+                  },
+                }}
+                src={AppleLogo}
+              />
+              <img
+                css={{
+                  margin: "0 5px",
+                  [media.greaterThan("large")]: {
+                    display: "none!important",
+                  },
+                }}
+                src={LinuxLogo}
+              />
+              <img
+                css={{
+                  margin: "0 5px",
+                }}
+                src={WindowsLogo}
+              />
             </div>
             <button
               css={{
@@ -84,7 +100,7 @@ const HomeHeroSection = () => {
                   backgroundColor: "#afaea4",
                   color: "#404040",
                 },
-                [media.size("xsmall")]: {
+                [media.lessThan("large")]: {
                   display: "none!important",
                 },
               }}
@@ -103,7 +119,7 @@ const HomeHeroSection = () => {
                 color: "#fff",
                 borderColor: "#fff",
               },
-              [media.size("xsmall")]: {
+              [media.lessThan("large")]: {
                 marginTop: "50px!important",
               },
             }}
@@ -123,7 +139,7 @@ const HomeHeroSection = () => {
         <div
           css={{
             boxShadow: " 0 30px 180px 0 rgba(35,38,60,.9)",
-            border: "1px solid #23263c",
+            border: `1px solid ${colors.greyBlue}`,
           }}
         >
           <img

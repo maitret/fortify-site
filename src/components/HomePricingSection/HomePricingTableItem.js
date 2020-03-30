@@ -1,6 +1,6 @@
 import React from "react"
 import { css } from "emotion"
-import { media } from "../../theme"
+import { media, colors } from "../../theme"
 
 const HomePricingTableItem = ({
   title = "",
@@ -9,10 +9,6 @@ const HomePricingTableItem = ({
   contentItems = [],
   customStyles = {},
 }) => {
-  console.error(
-    customStyles,
-    " customStylescustomStylescustomStylescustomStyles"
-  )
   return (
     <div
       css={{
@@ -32,7 +28,7 @@ const HomePricingTableItem = ({
         css={{
           borderTopLeftRadius: "4px",
           borderTopRightRadius: "4px",
-          backgroundColor: "#23263c",
+          backgroundColor: colors.greyBlue,
           color: "#4a4a4a",
           fontSize: "1.25rem",
           fontWeight: "600",
@@ -56,15 +52,18 @@ const HomePricingTableItem = ({
         }}
         className="pricing__table__price"
       >
-        <span
+        <div
           css={{
             fontSize: "2.5rem",
             fontWeight: 700,
             textAlign: "center",
+            [media.size("xsmall")]: {
+              fontSize: "1.5rem",
+            },
           }}
         >
           {price}
-        </span>
+        </div>
       </div>
       <div className="pricing__table__items">
         {contentItems.map(item => (
@@ -77,7 +76,7 @@ const HomePricingTableItem = ({
               alignContent: "center",
               textAlign: "center",
               fontSize: ".9em",
-              color: "#23263c",
+              color: colors.greyBlue,
             }}
             className="pricing-item"
           >

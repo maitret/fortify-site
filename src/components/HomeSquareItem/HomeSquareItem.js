@@ -1,8 +1,11 @@
-import React from "react"
+import React, { Fragment } from "react"
 import Flex from "../Flex"
 import { media } from "../../theme"
+import HomeSquareItemContent from "./HomeSquareItemContent"
 
-const HomeSquareItem = ({ children, backgroundColor, title }) => {
+import "./HomeSquareItem.css"
+
+const Content = ({ title, backgroundColor = "transparent", children }) => {
   return (
     <Flex
       css={{
@@ -15,8 +18,8 @@ const HomeSquareItem = ({ children, backgroundColor, title }) => {
         flexShrink: 1,
         minHeight: "min-content",
         [media.size("xsmall")]: {
-          paddingLeft: "0",
-          paddingRight: "0",
+          paddingLeft: "0!important",
+          paddingRight: "0!important",
         },
       }}
     >
@@ -26,10 +29,8 @@ const HomeSquareItem = ({ children, backgroundColor, title }) => {
         css={{
           width: "100%",
           height: "100%",
-          background: "transparent",
           background: backgroundColor,
           border: "1px solid #313131",
-          borderRadius: "inherit",
           transition: "300ms all ease",
           borderRadius: "4px",
           padding: "13px 20px",
@@ -41,6 +42,7 @@ const HomeSquareItem = ({ children, backgroundColor, title }) => {
         }}
       >
         {children}
+
         {title && (
           <span
             css={{
@@ -60,6 +62,49 @@ const HomeSquareItem = ({ children, backgroundColor, title }) => {
         )}
       </Flex>
     </Flex>
+  )
+}
+
+const HomeSquareItem = ({
+  children,
+  backgroundColor,
+  title,
+  logo,
+  header,
+  text,
+  link = null,
+}) => {
+  const content = (
+    <Content backgroundColor={backgroundColor} title={title}>
+      {children ? (
+        children
+      ) : (
+        <Flex valign="center">
+          <HomeSquareItemContent title={header} text={text} logo={logo} />
+        </Flex>
+      )}
+    </Content>
+  )
+
+  return (
+    <Fragment>
+      {link ? (
+        <a
+          css={{
+            display: "flex",
+            width: "100%",
+            height: "100%",
+            color: "inherit!important",
+          }}
+          target="_blank"
+          href={link}
+        >
+          {content}
+        </a>
+      ) : (
+        content
+      )}
+    </Fragment>
   )
 }
 

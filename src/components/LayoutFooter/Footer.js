@@ -12,7 +12,7 @@ const Footer = ({ layoutHasSidebar = false }) => (
   <footer
     css={{
       backgroundColor: "transparent",
-      borderTop: "1px solid #23263c",
+      borderTop: `1px solid ${colors.greyBlue}`,
       color: colors.white,
       paddingTop: 10,
       paddingBottom: 20,

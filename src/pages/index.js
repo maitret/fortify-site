@@ -7,7 +7,7 @@ import HomeHeroSection from "../components/HomeHeroSection"
 import HomeFeaturesSection from "../components/HomeFeaturesSection"
 import HomePricingSection from "../components/HomePricingSection"
 import HomeResourcesSection from "../components/HomeResourcesSection"
-
+import HomeSectionLayout from "../components/HomeSectionLayout"
 import { media } from "../theme"
 import configs from "../../site-config"
 
@@ -23,17 +23,25 @@ const IndexPage = ({ data }) => {
       />
       <div
         css={{
-          paddingTop: "80px",
+          paddingTop: "60px",
           background: "#000",
-          [media.size("xsmall")]: {
-            paddingTop: "60px",
-          },
         }}
       >
+        {/* <HomeSectionLayout> */}
         <HomeHeroSection />
+        {/* </HomeSectionLayout> */}
+
+        {/* <HomeSectionLayout> */}
         <HomeFeaturesSection />
+        {/* </HomeSectionLayout> */}
+
+        {/* <HomeSectionLayout> */}
         <HomePricingSection />
+        {/* </HomeSectionLayout> */}
+
+        {/* <HomeSectionLayout> */}
         <HomeResourcesSection />
+        {/* </HomeSectionLayout> */}
       </div>
       {/* <button onClick={openSidebar}>chat</button> */}
     </PageLayout>
