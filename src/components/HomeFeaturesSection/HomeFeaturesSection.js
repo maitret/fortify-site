@@ -105,7 +105,10 @@ const HomeFeaturesSection = () => {
                     borderRadius: "4px",
                   }}
                 >
-                  <HomeSquareItem backgroundColor={colors.greyBlue}>
+                  <HomeSquareItem
+                    backgroundColor={colors.greyBlue}
+                    flippedContent=""
+                  >
                     <Flex valign="center">
                       <img
                         css={{

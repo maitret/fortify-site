@@ -35,12 +35,12 @@ const Content = ({
           },
           ":hover": {
             ".card__face": {
-              WebkitTransform: "rotateY(-180deg)",
-              transform: "rotateY(-180deg)",
+              WebkitTransform: flippedContent ? "rotateY(-180deg)" : "initial",
+              transform: flippedContent ? "rotateY(-180deg)" : "initial",
             },
             ".card__back": {
-              WebkitTransform: "rotateY(0)",
-              transform: "rotateY(0)",
+              WebkitTransform: flippedContent ? "rotateY(0)" : "initial",
+              transform: flippedContent ? "rotateY(0)" : "initial",
               background: "blue",
             },
           },
