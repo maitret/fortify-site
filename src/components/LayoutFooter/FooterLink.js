@@ -1,14 +1,20 @@
 import { Link } from "gatsby"
 import React from "react"
 import { colors } from "../../theme"
+import { media } from "../../theme"
 
 const FooterLink = ({ children, target, to }) => (
   <Link
     css={{
-      lineHeight: 2,
-      color: colors.subtle,
+      color: "#9ea1b8",
+      borderBottom: "2px solid transparent",
+      marginBottom: "3px",
       ":hover": {
-        color: colors.brand,
+        color: "#fff",
+        borderColor: "#fff",
+      },
+      [media.size("xsmall")]: {
+        textAlign: "center!important",
       },
     }}
     to={to}

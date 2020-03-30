@@ -7,7 +7,8 @@ import hex2rgba from "hex2rgba"
 const colors = {
   lighter: "#373940", // light blue
   dark: "#282c34", // dark blue
-  darker: "#20232a", // really dark blue
+  darker: "#20232a", // really dark blue,
+  darkies: "#0a0c19", // swear this is darkest :D
   brand: "#967fcd", // electric blue
   brandLight: "#bbeffd",
   text: "#1a1a1a", // very dark grey / black substitute
@@ -18,6 +19,7 @@ const colors = {
   error: "#ff6464", // yellow
   white: "#ffffff",
   black: "#000000",
+  greyBlue: "#23263c",
 }
 
 const SIZES = {

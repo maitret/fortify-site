@@ -11,11 +11,11 @@ import navFooter from "../../../content/footerNav.yml"
 const Footer = ({ layoutHasSidebar = false }) => (
   <footer
     css={{
-      backgroundColor: "#f7f7f7",
+      backgroundColor: "transparent",
+      borderTop: `1px solid ${colors.greyBlue}`,
       color: colors.white,
       paddingTop: 10,
       paddingBottom: 20,
-      boxShadow: "2px 0px 10px 1px #aaaaaa",
 
       [media.size("sidebarFixed")]: {
         paddingTop: 40,
@@ -54,33 +54,18 @@ const Footer = ({ layoutHasSidebar = false }) => (
             css={{
               flexWrap: "wrap",
               display: "flex",
-
+              justifyContent: "space-around",
               [media.lessThan("large")]: {
                 width: "100%",
               },
               [media.greaterThan("xlarge")]: {
                 paddingLeft: 40,
               },
+              [media.size("xsmall")]: {
+                flexDirection: "column!important",
+              },
             }}
           >
-            <section
-              css={{
-                marginRight: "4rem",
-                display: "flex",
-                alignItems: "center",
-                [media.lessThan("medium")]: {
-                  display: "none",
-                },
-              }}
-            >
-              <img
-                alt="Static.site"
-                css={{
-                  maxWidth: 120,
-                  height: "auto",
-                }}
-              />
-            </section>
             <FooterNav layoutHasSidebar={layoutHasSidebar}>
               <MetaTitle onDark={true}>{navFooter.docs.title}</MetaTitle>
               {sectionListDocs.map(section => {
@@ -107,7 +92,7 @@ const Footer = ({ layoutHasSidebar = false }) => (
           </div>
           <div
             css={{
-              paddingTop: "1rem",
+              paddingTop: "2rem",
               color: colors.subtleOnDark,
               fontSize: 10,
               textAlign: "center",

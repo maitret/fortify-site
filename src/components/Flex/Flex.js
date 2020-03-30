@@ -17,7 +17,7 @@ const Flex = ({
   createElement(
     type,
     {
-      css: {
+      style: {
         display: "flex",
         flexDirection: direction,
         flexGrow: grow,
