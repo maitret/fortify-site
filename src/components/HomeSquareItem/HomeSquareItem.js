@@ -5,63 +5,114 @@ import HomeSquareItemContent from "./HomeSquareItemContent"
 
 import "./HomeSquareItem.css"
 
-const Content = ({ title, backgroundColor = "transparent", children }) => {
+const Content = ({
+  title,
+  backgroundColor = "transparent",
+  flippedContent,
+  children,
+}) => {
   return (
-    <Flex
+    <div
       css={{
         width: "100%",
-        height: "100%",
-        padding: ".75rem",
-        alignItems: "stretch",
-        flexBasis: 0,
-        flexGrow: 1,
-        flexShrink: 1,
-        minHeight: "min-content",
-        [media.size("xsmall")]: {
-          paddingLeft: "0!important",
-          paddingRight: "0!important",
-        },
+        padding: "5px",
       }}
     >
       <Flex
-        direction="column"
-        valign="center"
         css={{
           width: "100%",
           height: "100%",
-          background: backgroundColor,
-          border: "1px solid #313131",
-          transition: "300ms all ease",
-          borderRadius: "4px",
-          padding: "13px 20px",
-          position: "relative",
+
+          alignItems: "stretch",
+          flexBasis: 0,
+          flexGrow: 1,
+          flexShrink: 1,
+          position: "relative!important",
+          minHeight: "min-content",
+          [media.size("xsmall")]: {
+            paddingLeft: "0!important",
+            paddingRight: "0!important",
+          },
           ":hover": {
-            borderColor: "#f2f4f8",
-            boxShadow: " 0 15px 90px 0 rgba(35, 38, 60, .75)",
+            ".card__face": {
+              WebkitTransform: "rotateY(-180deg)",
+              transform: "rotateY(-180deg)",
+            },
+            ".card__back": {
+              WebkitTransform: "rotateY(0)",
+              transform: "rotateY(0)",
+              background: "blue",
+            },
+          },
+          ".card": {
+            WebkitTransition: "all 0.8s ease",
+            transition: "all 0.8s ease",
+            WebkitBackfaceVisibility: "hidden",
+            backfaceVisibility: "hidden",
           },
         }}
       >
-        {children}
+        <Flex
+          className="card card__face"
+          direction="column"
+          valign="center"
+          css={{
+            width: "100%",
+            height: "100%",
+            background: backgroundColor,
+            border: "1px solid #313131",
+            transition: "300ms all ease",
+            borderRadius: "4px",
+            padding: "13px 20px",
+            position: "relative",
+            ":hover": {
+              borderColor: "#f2f4f8",
+              boxShadow: " 0 15px 90px 0 rgba(35, 38, 60, .75)",
+            },
+          }}
+        >
+          {children}
 
-        {title && (
-          <span
+          {title && (
+            <span
+              css={{
+                color: "#363636",
+                fontSize: "1rem",
+                position: "absolute",
+                padding: "5px 15px",
+                background: "#f2f4f8",
+                fontWeight: "bold",
+                right: 0,
+                top: 0,
+                borderBottomLeftRadius: "20px",
+              }}
+            >
+              {title}
+            </span>
+          )}
+        </Flex>
+
+        {flippedContent && (
+          <div
             css={{
-              color: "#363636",
-              fontSize: "1rem",
+              WebkitTransform: "rotateY(180deg)",
+              transform: "rotateY(180deg)",
+              width: "100%",
               position: "absolute",
-              padding: "5px 15px",
-              background: "#f2f4f8",
-              fontWeight: "bold",
+              left: 0,
+              bottom: 0,
               right: 0,
               top: 0,
-              borderBottomLeftRadius: "20px",
+              borderRadius: "4px",
+              padding: "10px",
             }}
+            className="card card__back"
           >
-            {title}
-          </span>
+            {flippedContent}
+          </div>
         )}
       </Flex>
-    </Flex>
+    </div>
   )
 }
 
@@ -73,9 +124,14 @@ const HomeSquareItem = ({
   header,
   text,
   link = null,
+  flippedContent = <div>Test</div>,
 }) => {
   const content = (
-    <Content backgroundColor={backgroundColor} title={title}>
+    <Content
+      flippedContent={flippedContent}
+      backgroundColor={backgroundColor}
+      title={title}
+    >
       {children ? (
         children
       ) : (
@@ -87,7 +143,15 @@ const HomeSquareItem = ({
   )
 
   return (
-    <Fragment>
+    <div
+      css={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        alignItems: "stretch",
+        justifyContent: "stretch",
+      }}
+    >
       {link ? (
         <a
           css={{
@@ -104,7 +168,7 @@ const HomeSquareItem = ({
       ) : (
         content
       )}
-    </Fragment>
+    </div>
   )
 }
 

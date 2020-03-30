@@ -8,6 +8,7 @@ import HomeFeaturesSection from "../components/HomeFeaturesSection"
 import HomePricingSection from "../components/HomePricingSection"
 import HomeResourcesSection from "../components/HomeResourcesSection"
 import HomeSectionLayout from "../components/HomeSectionLayout"
+import HomeTwitterSection from "../components/HomeTwitterSection"
 import { media } from "../theme"
 import configs from "../../site-config"
 
@@ -42,7 +43,12 @@ const IndexPage = ({ data }) => {
         {/* <HomeSectionLayout> */}
         <HomeResourcesSection />
         {/* </HomeSectionLayout> */}
+
+        {/* <HomeSectionLayout> */}
+        <HomeTwitterSection />
+        {/* </HomeSectionLayout> */}
       </div>
+
       {/* <button onClick={openSidebar}>chat</button> */}
     </PageLayout>
   )
