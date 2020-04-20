@@ -11,8 +11,8 @@ import { Check, Unchecked } from "../../svg"
 const HomePricingSection = () => {
   return (
     <Flex
-      id="pricing__section"
-      className="pricing__section"
+      id="pricing"
+      className="pricing"
       halign="center"
       direction="column"
       css={{
@@ -21,7 +21,7 @@ const HomePricingSection = () => {
       }}
     >
       <Flex
-        className="pricing__section__inner"
+        className="pricing__inner"
         direction="column"
         halign="center"
         css={{
@@ -29,13 +29,9 @@ const HomePricingSection = () => {
           margin: "0 auto",
         }}
       >
-        <Flex
-          className="pricing__section__container"
-          halign="center"
-          direction="column"
-        >
+        <Flex className="pricing__container" halign="center" direction="column">
           <Flex
-            className="pricing__section__description"
+            className="pricing__description"
             direction="column"
             css={{
               width: "83.333%",
@@ -53,7 +49,7 @@ const HomePricingSection = () => {
         </Flex>
 
         <Flex
-          className="pricing__section__table"
+          className="pricing__table"
           css={{
             color: "#f2f4f8",
             minWidth: "100%",

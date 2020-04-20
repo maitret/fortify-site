@@ -15,9 +15,11 @@ import LinuxLogo from "./linux-logo.svg"
 import AppleLogo from "./apple-logo.svg"
 import WindowsLogo from "./windows-logo.svg"
 import BackgroundLines from "./background-lines.svg"
+import AppIcon from "./icon.svg"
 
 export {
   Themes,
+  AppIcon,
   SmallLogo,
   ComputerLogo,
   ReverseTime,

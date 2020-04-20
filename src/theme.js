@@ -4,6 +4,14 @@
 
 import hex2rgba from "hex2rgba"
 
+const meta = {
+  app: {
+    slug: "network-chimp",
+    title: "Network Chimp",
+    description: "A cloud-based job manager that integrates your devices.",
+  },
+}
+
 const colors = {
   lighter: "#373940", // light blue
   dark: "#282c34", // dark blue
@@ -411,4 +419,4 @@ const sharedStyles = {
   },
 }
 
-export { colors, fonts, media, sharedStyles }
+export { colors, fonts, media, sharedStyles, meta }

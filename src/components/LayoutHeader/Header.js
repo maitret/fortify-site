@@ -1,11 +1,11 @@
 import HeaderLink from "./HeaderLink"
 import { Link } from "gatsby"
 import React, { useState } from "react"
-import { colors, media } from "../../theme"
+import { colors, media, meta } from "../../theme"
 import DocSearch from "./DocSearch"
 import { useDrift } from "../Drift"
 import navHeader from "../../../content/headerNav.yml"
-import logoPng from "../../../static/icon.png"
+import { AppIcon } from "../../svg"
 
 const Header = ({ location }) => {
   // const [, openSidebar] = useDrift()
@@ -63,7 +63,7 @@ const Header = ({ location }) => {
             }}
             to="/"
           >
-            <img alt="logo" src={logoPng} style={{ width: 50 }} />
+            <img alt="logo" src={AppIcon} style={{ width: 50 }} />
             <span
               css={{
                 color: "inherit",
@@ -85,7 +85,7 @@ const Header = ({ location }) => {
                 },
               }}
             >
-              Static.site
+              {meta.app.title}
             </span>
           </Link>
 
@@ -179,10 +179,37 @@ const Header = ({ location }) => {
               },
             }}
           >
-            <HeaderLink title="Features" to="#" />
-            <HeaderLink title="Download" to="#" />
-            <HeaderLink title="Resources" to="#" />
-            <HeaderLink title="Pricing" to="#" />
+            <HeaderLink isAnchor offset="40" title="Features" to="#features" />
+            <HeaderLink
+              isAnchor
+              offset="40"
+              title="Resources"
+              to="#resources"
+            />
+            <HeaderLink isAnchor offset="40" title="Pricing" to="#pricing" />
+            <a
+              css={{
+                backgroundColor: "#1e2134",
+                borderColor: "transparent",
+                color: "#fff",
+                borderRadius: "290486px",
+                fontWeight: "bold",
+                padding: "0.3em 1em",
+                outline: "none",
+                cursor: "pointer",
+                transition: "200ms all ease",
+                ":hover": {
+                  backgroundColor: "#afaea4",
+                  color: "#404040",
+                },
+                [media.lessThan("large")]: {
+                  display: "none!important",
+                },
+              }}
+              href={`https://cloudflare.com/apps/${meta.app.slug}`}
+            >
+              Install on Cloudflare
+            </a>
           </nav>
         </div>
       </div>

@@ -12,8 +12,8 @@ import { Question, Medium, Book, Github, Exit } from "../../svg"
 const HomeResourcesSection = () => {
   return (
     <Flex
-      id="resources__section"
-      className="resources__section"
+      id="resources"
+      className="resources"
       halign="center"
       direction="column"
       css={{
@@ -22,7 +22,7 @@ const HomeResourcesSection = () => {
       }}
     >
       <Flex
-        className="resources__section__inner"
+        className="resources__inner"
         direction="column"
         halign="center"
         css={{
@@ -31,12 +31,12 @@ const HomeResourcesSection = () => {
         }}
       >
         <Flex
-          className="resources__section__container"
+          className="resources__container"
           halign="center"
           direction="column"
         >
           <Flex
-            className="resources__section__description"
+            className="resources__description"
             direction="column"
             css={{
               width: "83.333%",
@@ -51,7 +51,7 @@ const HomeResourcesSection = () => {
         </Flex>
 
         <Flex
-          className="resources__section__resources"
+          className="resources__resources"
           valign="stretch"
           css={{
             color: "#f2f4f8",
@@ -63,7 +63,7 @@ const HomeResourcesSection = () => {
           }}
         >
           <div
-            className="resources__section__resources__left"
+            className="resources__resources__left"
             css={{
               flex: 1,
               height: "100%",
@@ -96,7 +96,7 @@ const HomeResourcesSection = () => {
           </div>
 
           <Flex
-            className="resources__section__resources__right"
+            className="resources__resources__right"
             valign="stretch"
             css={{
               flex: "2!important",

@@ -1,9 +1,9 @@
 import React from "react"
+import { Tooltip } from "antd"
 import Flex from "../Flex"
-import { WindowsLogo, AppleLogo, LinuxLogo, BackgroundLines } from "../../svg"
+import { WindowsLogo, BackgroundLines } from "../../svg"
 import ScreenShot from "../../images/screenshot-background.png"
-import { media, colors } from "../../theme"
-
+import { media, colors, meta } from "../../theme"
 const HomeHeroSection = () => {
   return (
     <Flex
@@ -30,7 +30,7 @@ const HomeHeroSection = () => {
             fontSize: "46px",
           }}
         >
-          Networkchip
+          {meta.app.title}
         </h1>
         <p
           css={{
@@ -46,7 +46,7 @@ const HomeHeroSection = () => {
             },
           }}
         >
-          A cloud-based job manager that integrates your devices.
+          {meta.app.description}
         </p>
         <Flex
           className="hero__platform"
@@ -61,29 +61,11 @@ const HomeHeroSection = () => {
               <img
                 css={{
                   margin: "0 5px",
-                  [media.greaterThan("large")]: {
-                    display: "none!important",
-                  },
-                }}
-                src={AppleLogo}
-              />
-              <img
-                css={{
-                  margin: "0 5px",
-                  [media.greaterThan("large")]: {
-                    display: "none!important",
-                  },
-                }}
-                src={LinuxLogo}
-              />
-              <img
-                css={{
-                  margin: "0 5px",
                 }}
                 src={WindowsLogo}
               />
             </div>
-            <button
+            <a
               css={{
                 margin: "25px 0",
                 backgroundColor: "#1e2134",
@@ -104,28 +86,35 @@ const HomeHeroSection = () => {
                   display: "none!important",
                 },
               }}
+              href={`https://cloudflare.com/apps/${meta.app.slug}`}
             >
-              Download for windows
-            </button>
+              Install on Cloudflare
+            </a>
           </Flex>
-          <a
-            href="#"
-            css={{
-              color: "#9ea1b8",
-              borderBottom: "2px solid transparent",
-              fontSize: "16px",
-              transition: "200ms all ease",
-              ":hover": {
-                color: "#fff",
-                borderColor: "#fff",
-              },
-              [media.lessThan("large")]: {
-                marginTop: "50px!important",
-              },
-            }}
+          <Tooltip
+            placement="bottom"
+            title="Is your website on the Cloudflare network?  We're compatible."
+            arrowPointAtCenter
           >
-            Other platforms
-          </a>
+            <a
+              href="#"
+              css={{
+                color: "#9ea1b8",
+                borderBottom: "2px solid transparent",
+                fontSize: "16px",
+                transition: "200ms all ease",
+                ":hover": {
+                  color: "#fff",
+                  borderColor: "#fff",
+                },
+                [media.lessThan("large")]: {
+                  marginTop: "50px!important",
+                },
+              }}
+            >
+              Install on Cloudflare?
+            </a>
+          </Tooltip>
         </Flex>
       </Flex>
 

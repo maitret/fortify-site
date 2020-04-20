@@ -18,8 +18,8 @@ import {
 const HomeFeaturesSection = () => {
   return (
     <Flex
-      id="features__section"
-      className="features__section"
+      id="features"
+      className="features"
       halign="center"
       direction="column"
       css={{
@@ -28,7 +28,7 @@ const HomeFeaturesSection = () => {
       }}
     >
       <Flex
-        className="features__section__inner"
+        className="features__inner"
         direction="column"
         halign="center"
         css={{
@@ -37,12 +37,12 @@ const HomeFeaturesSection = () => {
         }}
       >
         <Flex
-          className="features__section__container"
+          className="features__container"
           halign="center"
           direction="column"
         >
           <Flex
-            className="features__section__description"
+            className="features__description"
             direction="column"
             css={{
               width: "83.333%",
@@ -61,7 +61,7 @@ const HomeFeaturesSection = () => {
         </Flex>
 
         <Flex
-          className="features__section__features"
+          className="features__features"
           valign="stretch"
           css={{
             color: "#f2f4f8",
@@ -207,7 +207,7 @@ const HomeFeaturesSection = () => {
                 width: "100%!important",
               },
             }}
-            className="features__section__right"
+            className="features__right"
           >
             <div
               css={{

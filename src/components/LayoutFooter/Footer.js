@@ -98,10 +98,6 @@ const Footer = ({ layoutHasSidebar = false }) => (
               textAlign: "center",
             }}
           >
-            Nothing on this site should be considered legal advice and no
-            attorney-client relationship is established. Please note that in
-            some cases, depending on your legislation, further actions may be
-            required to make your activity compliant with the law.
             <p
               css={{
                 color: colors.subtleOnDark,

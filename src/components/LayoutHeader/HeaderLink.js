@@ -1,13 +1,20 @@
 import { Link } from "gatsby"
 import React from "react"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 import { colors, media } from "../../theme"
 
-const HeaderLink = ({ isActive, title, to }) => (
-  <Link css={[style, isActive && activeStyle]} to={to}>
-    {title}
-    {isActive && <span css={activeAfterStyle} />}
-  </Link>
-)
+const HeaderLink = ({ isActive, title, to, isAnchor }) =>
+  isAnchor ? (
+    <AnchorLink css={[style, isActive && activeStyle]} href={to}>
+      {title}
+      {isActive && <span css={activeAfterStyle} />}
+    </AnchorLink>
+  ) : (
+    <Link css={[style, isActive && activeStyle]} to={to}>
+      {title}
+      {isActive && <span css={activeAfterStyle} />}
+    </Link>
+  )
 
 const style = {
   display: "flex",
