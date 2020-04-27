@@ -6,6 +6,7 @@ import MarkdownPage from "../components/MarkdownPage"
 import { createLinkDocs } from "..//utils/createLink"
 import { sectionListDocs } from "..//utils/sectionList"
 import configs from "../../site-config"
+import { meta } from "../theme"
 
 const Docs = ({ data, location }) => (
   <DocsLayout location={location}>
@@ -16,7 +17,7 @@ const Docs = ({ data, location }) => (
       createLink={createLinkDocs}
       sectionList={sectionListDocs}
       metaKeywords={configs.docs_keywords}
-      titlePostfix=" &ndash; Static.site Docs"
+      titlePostfix={` &ndash; ${meta.app.title} Docs`}
     />
   </DocsLayout>
 )

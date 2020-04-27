@@ -10,13 +10,13 @@ legal:
       to: /legal/privacy-policy
     - title: Cookie Policy
       to: /legal/cookie-policy
-    - title: Standard Agreement
-      to: /legal/standard-agreement
 
 more:
   title: More
   items:
-    - title: Blog
-      to: /blog
-    - title: Compliance Analyzer
-      to: /compliance-analyzer
+    - title: FAQ
+      to: /faq
+    - title: Contribute
+      to: /contribute
+    - title: Learn
+      to: /learn

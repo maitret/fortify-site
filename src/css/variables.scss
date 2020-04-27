@@ -1,0 +1,30 @@
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+@import "../../node_modules/bulma/sass/utilities/derived-variables";
+
+$primary: #72ba81;
+$primary_invert: findColorInvert($primary);
+$primary_light: lighten($primary, 30%);
+$primary_dark: darken($primary, 30%);
+
+$dark: #23263c;
+$dark_invert: findColorInvert($dark);
+$dark_light: lighten($dark, 30%);
+$dark_dark: darken($dark, 30%);
+
+$addColors: (
+  "primary": (
+    $primary,
+    $primary_invert,
+    $primary_light,
+    $primary_dark,
+  ),
+  "dark": (
+    $dark,
+    $dark_invert,
+    $dark_light,
+    $dark_dark,
+  ),
+);
+
+$colors: map-merge($colors, $addColors);

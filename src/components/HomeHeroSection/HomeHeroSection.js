@@ -1,9 +1,10 @@
 import React from "react"
 import { Tooltip } from "antd"
 import Flex from "../Flex"
-import { WindowsLogo, BackgroundLines } from "../../svg"
-import ScreenShot from "../../images/screenshot-background.png"
+import VideoGallery from "../VideoGallery"
+import { CloudflareLogo, BackgroundLines } from "../../svg"
 import { media, colors, meta } from "../../theme"
+
 const HomeHeroSection = () => {
   return (
     <Flex
@@ -28,9 +29,10 @@ const HomeHeroSection = () => {
             color: "#f2f4f8",
             fontWeight: "bold",
             fontSize: "46px",
+            fontFamily: meta.app.fontFamily,
           }}
         >
-          {meta.app.title}
+          {meta.app.title.toUpperCase()}
         </h1>
         <p
           css={{
@@ -59,10 +61,12 @@ const HomeHeroSection = () => {
           <Flex direction="column" halign="center">
             <div>
               <img
+                alt="cloudflare logo"
                 css={{
                   margin: "0 5px",
+                  width: 120,
                 }}
-                src={WindowsLogo}
+                src={CloudflareLogo}
               />
             </div>
             <a
@@ -79,8 +83,8 @@ const HomeHeroSection = () => {
                 cursor: "pointer",
                 transition: "200ms all ease",
                 ":hover": {
-                  backgroundColor: "#afaea4",
-                  color: "#404040",
+                  backgroundColor: "hsl(28, 90%, 25%)",
+                  color: "white",
                 },
                 [media.lessThan("large")]: {
                   display: "none!important",
@@ -93,11 +97,11 @@ const HomeHeroSection = () => {
           </Flex>
           <Tooltip
             placement="bottom"
-            title="Is your website on the Cloudflare network?  We're compatible."
+            title={`${meta.app.title} can be installed on any Cloudflare-enabled website in a few clicks.`}
             arrowPointAtCenter
           >
             <a
-              href="#"
+              href="/"
               css={{
                 color: "#9ea1b8",
                 borderBottom: "2px solid transparent",
@@ -121,8 +125,7 @@ const HomeHeroSection = () => {
       <Flex
         className="herro__section__screenshot"
         css={{
-          maxWidth: "95%",
-          padding: "3rem 0",
+          padding: "0 0 3rem 0",
         }}
       >
         <div
@@ -131,12 +134,21 @@ const HomeHeroSection = () => {
             border: `1px solid ${colors.greyBlue}`,
           }}
         >
-          <img
-            src={ScreenShot}
-            alt="screeenshot"
-            css={{
-              width: "100%",
-            }}
+          <VideoGallery
+            light={true}
+            volume={1}
+            muted={true}
+            playing={true}
+            sourceList={[
+              {
+                url: "https://vimeo.com/318419016",
+                description: "Coding a whole app using only a phone",
+              },
+              {
+                url: "https://www.youtube.com/watch?v=t1QRdhVCzeA",
+                description: "Commercial pizza",
+              },
+            ]}
           />
         </div>
       </Flex>

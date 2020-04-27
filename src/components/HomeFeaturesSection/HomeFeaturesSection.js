@@ -2,9 +2,8 @@ import React from "react"
 import Flex from "../Flex"
 import HomeSquareItem from "../HomeSquareItem"
 import HomeSectionHeader from "../HomeSectionHeader"
-import HomeSectionLargeText from "../HomeSectionLargeText"
 import ScreenShotSmall from "../../images/screenshot-small.png"
-import { media, colors } from "../../theme"
+import { media, colors, meta } from "../../theme"
 
 import {
   Themes,
@@ -19,7 +18,6 @@ const HomeFeaturesSection = () => {
   return (
     <Flex
       id="features"
-      className="features"
       halign="center"
       direction="column"
       css={{
@@ -36,29 +34,12 @@ const HomeFeaturesSection = () => {
           margin: "0 auto",
         }}
       >
-        <Flex
-          className="features__container"
-          halign="center"
-          direction="column"
-        >
-          <Flex
-            className="features__description"
-            direction="column"
-            css={{
-              width: "83.333%",
-              [media.lessThan("medium")]: {
-                width: "100%!important",
-              },
-            }}
-          >
-            <HomeSectionHeader text="# FEATURES" />
-            <HomeSectionLargeText
-              text="Networkchip is a cloud-based job manager that offers device
-              synchronization and reliable message delivery in a network of
-              connected devices even after connectivity issues."
-            />
-          </Flex>
-        </Flex>
+        <HomeSectionHeader
+          title="# FEATURES"
+          text={`${meta.app.title} is a cloud-based job manager that offers device
+          synchronization and reliable message delivery in a network of
+          connected devices even after connectivity issues.`}
+        />
 
         <Flex
           className="features__features"
@@ -116,6 +97,7 @@ const HomeFeaturesSection = () => {
                           marginRight: "10px",
                         }}
                         src={SmallLogo}
+                        alt="compact logo"
                       />
                       <span
                         css={{
@@ -223,7 +205,6 @@ const HomeFeaturesSection = () => {
                 }}
               >
                 <HomeSquareItem
-                  title="BASIC"
                   backgroundColor="transparent"
                   logo={Time}
                   header="Scheduled Jobs"
@@ -236,7 +217,6 @@ const HomeFeaturesSection = () => {
                 }}
               >
                 <HomeSquareItem
-                  title="BASIC"
                   backgroundColor="transparent"
                   logo={Menu}
                   header="Parallel Execution"

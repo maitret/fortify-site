@@ -1,0 +1,41 @@
+@import "../../css/variables.scss";
+
+.domain-tag {
+  display: inline-flex;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-radius: 30px;
+  border: 1px solid $primary;
+  background-color: $primary;
+  align-items: center;
+  margin: 0 3px 6px 3px;
+  color: white;
+
+  &:last-child:not(:first-child) {
+    margin: 0 0 6px 3px;
+  }
+  &:first-child:not(:last-child) {
+    margin: 0 3px 6px 0;
+  }
+  .tag-exit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    border: 0;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.2s ease;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    i {
+      color: white;
+      font-size: 14px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

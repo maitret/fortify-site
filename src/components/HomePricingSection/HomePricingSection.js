@@ -1,52 +1,37 @@
-import React, { Fragment } from "react"
+import React, { useRef } from "react"
 import Flex from "../Flex"
 import HomePricingTableItem from "./HomePricingTableItem"
-import HomeSectionLargeText from "../HomeSectionLargeText"
 import HomeSectionHeader from "../HomeSectionHeader"
-
-import { media, colors } from "../../theme"
-
-import { Check, Unchecked } from "../../svg"
+import PaymentModal from "../PaymentModal"
+import { media, colors, meta } from "../../theme"
+import { Check } from "../../svg"
 
 const HomePricingSection = () => {
+  const paymentModalRef = useRef(null)
+
+  const handlePlanClick = () => {
+    paymentModalRef.current &&
+      paymentModalRef.current.classList.add("is-active")
+  }
+
   return (
-    <Flex
-      id="pricing"
-      className="pricing"
-      halign="center"
-      direction="column"
-      css={{
-        padding: "2.5rem 1.5rem",
-        backgroundImage: "linear-gradient(180deg, transparent,#0b0d1b)",
-      }}
-    >
+    <>
+      <PaymentModal rootRef={paymentModalRef} />
       <Flex
-        className="pricing__inner"
-        direction="column"
+        id="pricing"
+        className="pricing"
         halign="center"
+        direction="column"
         css={{
-          maxWidth: "1152px",
-          margin: "0 auto",
+          padding: "2.5rem 1.5rem",
+          backgroundImage: "linear-gradient(180deg, transparent,#0b0d1b)",
         }}
       >
-        <Flex className="pricing__container" halign="center" direction="column">
-          <Flex
-            className="pricing__description"
-            direction="column"
-            css={{
-              width: "83.333%",
-              [media.lessThan("medium")]: {
-                width: "100%",
-              },
-            }}
-          >
-            <HomeSectionHeader text="# PRICING" />
-            <HomeSectionLargeText
-              text="We will soon offer more features and customization options
+        <HomeSectionHeader
+          title="# PRICING"
+          text="We will soon offer more features and customization options
               on a monthly subscription plan."
-            />
-          </Flex>
-        </Flex>
+        />
 
         <Flex
           className="pricing__table"
@@ -54,13 +39,14 @@ const HomePricingSection = () => {
             color: "#f2f4f8",
             minWidth: "100%",
             marginTop: "20px",
+            justifyContent: "center!important",
             [media.size("xsmall")]: {
               justifyContent: "center!important",
             },
           }}
         >
           <HomePricingTableItem
-            title="Feautres"
+            title="Features"
             price={
               <span
                 css={{
@@ -95,7 +81,7 @@ const HomePricingSection = () => {
               },
             }}
           />
-          <HomePricingTableItem
+          {/* <HomePricingTableItem
             title="Free"
             price="-"
             contentItems={[
@@ -123,7 +109,7 @@ const HomePricingSection = () => {
                 margin: "0 5px",
               },
             }}
-          />
+          /> */}
           <HomePricingTableItem
             title="Basic"
             price={
@@ -139,7 +125,7 @@ const HomePricingSection = () => {
                   },
                 }}
               >
-                <Flex>
+                <Flex halign="center" valign="center">
                   <span
                     css={{
                       fontSize: "1rem",
@@ -151,9 +137,10 @@ const HomePricingSection = () => {
                   <span
                     css={{
                       color: colors.greyBlue,
+                      marginRight: 8,
                     }}
                   >
-                    TBA
+                    {meta.app.pricePerDomain}
                   </span>
                 </Flex>
                 <span
@@ -162,20 +149,21 @@ const HomePricingSection = () => {
                     fontWeight: 400,
                   }}
                 >
-                  /month
+                  / domain / month
                 </span>
               </Flex>
             }
             contentItems={[
               10,
               25,
-              <img css={{ width: "13px" }} src={Check} />,
-              <img css={{ width: "13px" }} src={Check} />,
-              <img css={{ width: "13px" }} src={Check} />,
+              <img alt="checkmark" css={{ width: "13px" }} src={Check} />,
+              <img alt="checkmark" css={{ width: "13px" }} src={Check} />,
+              <img alt="checkmark" css={{ width: "13px" }} src={Check} />,
               3,
             ]}
             footer={
               <button
+                onClick={handlePlanClick}
                 css={{
                   display: "flex",
                   justifyContent: "center",
@@ -190,16 +178,16 @@ const HomePricingSection = () => {
                   outline: "none",
                   transition: "300ms all ease",
                   ":hover": {
-                    background: "#d7d6d0",
-                    color: "#a5a5a5",
-                    cursor: "not-allowed",
+                    background: colors.brand,
+                    color: "white",
+                    cursor: "pointer",
                   },
                   [media.size("xsmall")]: {
                     fontSize: "14px",
                   },
                 }}
               >
-                Coming soon
+                Get Started
               </button>
             }
             customStyles={{
@@ -213,7 +201,7 @@ const HomePricingSection = () => {
           />
         </Flex>
       </Flex>
-    </Flex>
+    </>
   )
 }
 

@@ -2,22 +2,24 @@
  * Theme contains variables shared by styles of multiple components.
  */
 
-import hex2rgba from "hex2rgba"
+const hex2rgba = require("hex2rgba")
 
 const meta = {
   app: {
-    slug: "network-chimp",
-    title: "Network Chimp",
-    description: "A cloud-based job manager that integrates your devices.",
+    slug: "portzilla",
+    title: "Portzilla",
+    description: "Proxy traffic to any service on your domain without NGINX",
+    fontFamily: `'Solway', -apple-system, BlinkMacSystemFont, "Segoe UI"`,
+    pricePerDomain: 4.99,
   },
 }
 
 const colors = {
+  brand: "#72ba81", // electric blue
   lighter: "#373940", // light blue
   dark: "#282c34", // dark blue
   darker: "#20232a", // really dark blue,
   darkies: "#0a0c19", // swear this is darkest :D
-  brand: "#967fcd", // electric blue
   brandLight: "#bbeffd",
   text: "#1a1a1a", // very dark grey / black substitute
   subtle: "#6d6d6d", // light grey for text
@@ -28,6 +30,7 @@ const colors = {
   white: "#ffffff",
   black: "#000000",
   greyBlue: "#23263c",
+  lightHighlight: "hsl(220, 30%, 96%)",
 }
 
 const SIZES = {
@@ -106,7 +109,7 @@ const fonts = {
 // Shared styles are generally better as components,
 // Except when they must be used within nested CSS selectors.
 // This is the case for eg markdown content.
-export const linkStyle = {
+const linkStyle = {
   backgroundColor: hex2rgba(colors.brand, 0.2),
   borderBottom: `1px solid ${hex2rgba(colors.black, 0.2)}`,
   color: colors.text,
@@ -116,6 +119,7 @@ export const linkStyle = {
     borderBottomColor: colors.text,
   },
 }
+
 const sharedStyles = {
   link: linkStyle,
 
@@ -419,4 +423,4 @@ const sharedStyles = {
   },
 }
 
-export { colors, fonts, media, sharedStyles, meta }
+module.exports = { colors, fonts, media, sharedStyles, meta, linkStyle }

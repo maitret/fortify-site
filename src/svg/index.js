@@ -11,10 +11,9 @@ import Medium from "./medium.svg"
 import Book from "./book.svg"
 import Github from "./github.svg"
 import Exit from "./exit.svg"
-import LinuxLogo from "./linux-logo.svg"
-import AppleLogo from "./apple-logo.svg"
-import WindowsLogo from "./windows-logo.svg"
+import CloudflareLogo from "./cloudflare.svg"
 import BackgroundLines from "./background-lines.svg"
+import MachineLearning from "./machine-learning.svg"
 import AppIcon from "./icon.svg"
 
 export {
@@ -23,6 +22,7 @@ export {
   SmallLogo,
   ComputerLogo,
   ReverseTime,
+  MachineLearning,
   Time,
   Menu,
   Check,
@@ -32,8 +32,6 @@ export {
   Book,
   Github,
   Exit,
-  LinuxLogo,
-  AppleLogo,
-  WindowsLogo,
+  CloudflareLogo,
   BackgroundLines,
 }

@@ -1,7 +1,22 @@
 import { Link } from "gatsby"
 import React from "react"
-import AnchorLink from "react-anchor-link-smooth-scroll"
+// import AnchorLink from "react-anchor-link-smooth-scroll"
 import { colors, media } from "../../theme"
+
+const AnchorLink = ({ css, href, children }) => (
+  <a
+    css={css}
+    onClick={() => {
+      const selector = document.querySelector(href)
+      return selector.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      })
+    }}
+  >
+    {children}
+  </a>
+)
 
 const HeaderLink = ({ isActive, title, to, isAnchor }) =>
   isAnchor ? (

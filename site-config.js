@@ -1,32 +1,19 @@
+const { meta } = require("./src/theme")
+
 module.exports = {
   path_prefix: "/",
   google_analytics_ID: "",
-  app_url: "https://static.site",
-  app_logo_link: "https://static.site/icons/icon-384x384.png",
-  app_title: "Static site",
-  app_subtitle_short: "A static site",
+  app_url: `https://${meta.app.slug}.networkchimp.com`,
+  app_logo_link: `https://${meta.app.slug}.networkchimp.com/icons/icon-384x384.png`,
+  app_title: meta.app.title,
+  app_subtitle_short: meta.app.description,
   app_description: {
-    index: "A cool static site",
+    index: meta.app.description,
     fourOhFour: "404 Page Not Found",
-    legal: "View our Terms of Service and other legal documentation",
-    termsOfService: "View our Terms of Service",
-    privacyPolicy: "View our Privacy Policy",
-    cookiePolicy: "View our Cookie Policy",
-    standardAgreement: "View our Standard Agreement",
   },
-  app_keywords: ["static.site"],
+  app_keywords: [meta.app.title],
   four_oh_four_keywords: ["page not found"],
-  legal_keywords: ["legal", "law"],
-  terms_of_service_keywords: ["tos", "terms of service"],
-  privacy_policy_keywords: ["pp", "privacy policy"],
-  cookie_policy_keywords: ["cookie policy"],
-  standard_agreement_keywords: ["standard agreement"],
-
   // Personal Info
-  your_name: "Static site",
-  your_link: "https://static.site",
-  email_address: "support@networkchimp.com",
-  phone_number: "",
   twitter_username: "NetworkChimp",
   docs: {
     pathname: "docs",
@@ -40,11 +27,10 @@ module.exports = {
     header: {
       logo: "/icon.png",
       logoLink: "/",
-      title: "Static site",
+      title: meta.app.title,
       subtitle: "Documentation",
       githubUrl: "",
       helpUrl: "",
-      tweetText: "sup",
       links: [{ text: "", link: "" }],
     },
   },

@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
 import React from "react"
-import { colors } from "../../theme"
 import { media } from "../../theme"
 
 const FooterLink = ({ children, target, to }) => (

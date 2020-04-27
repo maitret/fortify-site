@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import isDev from "../utils/isDev"
+import { meta as themeMeta } from "../theme"
+console.log("themeMeta", themeMeta)
 
 function SEO({ description, lang, meta, keywords, title, page = "index" }) {
   const { site } = useStaticQuery(
@@ -22,11 +24,6 @@ function SEO({ description, lang, meta, keywords, title, page = "index" }) {
             description {
               index
               fourOhFour
-              legal
-              termsOfService
-              privacyPolicy
-              cookiePolicy
-              standardAgreement
             }
           }
         }
@@ -79,7 +76,7 @@ function SEO({ description, lang, meta, keywords, title, page = "index" }) {
       <Helmet
         htmlAttributes={{ lang }}
         title={title}
-        titleTemplate="Static.site | %s"
+        titleTemplate={`${themeMeta.app.title} | %s`}
         meta={[
           {
             name: `description`,

@@ -1,5 +1,4 @@
 import React from "react"
-import { css } from "emotion"
 import { media, colors } from "../../theme"
 
 const HomePricingTableItem = ({
@@ -29,7 +28,6 @@ const HomePricingTableItem = ({
           borderTopLeftRadius: "4px",
           borderTopRightRadius: "4px",
           backgroundColor: colors.greyBlue,
-          color: "#4a4a4a",
           fontSize: "1.25rem",
           fontWeight: "600",
           padding: ".75em",
@@ -54,7 +52,7 @@ const HomePricingTableItem = ({
       >
         <div
           css={{
-            fontSize: "2.5rem",
+            fontSize: "1.8rem",
             fontWeight: 700,
             textAlign: "center",
             [media.size("xsmall")]: {

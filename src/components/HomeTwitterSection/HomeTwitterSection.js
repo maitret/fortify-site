@@ -16,10 +16,10 @@ const EmbedContainer = ({ ids }) => {
         },
       }}
     >
-      {ids.map(id => (
+      {ids.map((id, i) => (
         <Flex
           halign="center"
-          key={id.toString()}
+          key={i}
           css={{
             margin: "5px",
             width: "100%",
@@ -31,6 +31,7 @@ const EmbedContainer = ({ ids }) => {
               tweetLimit: "10",
               width: "100%",
               height: "100%",
+              theme: "dark",
             }}
           />
         </Flex>

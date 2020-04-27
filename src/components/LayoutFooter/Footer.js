@@ -26,7 +26,7 @@ const Footer = ({ layoutHasSidebar = false }) => (
     }}
   >
     <Container>
-      <div
+      {/* <div
         css={{
           display: "flex",
           flexDirection: "row",
@@ -43,72 +43,73 @@ const Footer = ({ layoutHasSidebar = false }) => (
             paddingRight: layoutHasSidebar ? 380 : null,
           },
         }}
+      > */}
+      <div
+        css={{
+          display: "flex",
+          flexDirection: "column",
+        }}
       >
         <div
           css={{
+            flexWrap: "wrap",
             display: "flex",
-            flexDirection: "column",
+            justifyContent: "space-around",
+            [media.lessThan("large")]: {
+              width: "100%",
+            },
+            [media.greaterThan("xlarge")]: {
+              paddingLeft: 40,
+            },
+            [media.size("xsmall")]: {
+              flexDirection: "column!important",
+            },
           }}
         >
-          <div
-            css={{
-              flexWrap: "wrap",
-              display: "flex",
-              justifyContent: "space-around",
-              [media.lessThan("large")]: {
-                width: "100%",
-              },
-              [media.greaterThan("xlarge")]: {
-                paddingLeft: 40,
-              },
-              [media.size("xsmall")]: {
-                flexDirection: "column!important",
-              },
-            }}
-          >
-            <FooterNav layoutHasSidebar={layoutHasSidebar}>
-              <MetaTitle onDark={true}>{navFooter.docs.title}</MetaTitle>
-              {sectionListDocs.map(section => {
-                const defaultItem = section.items[0]
-                return (
-                  <FooterLink
-                    to={`/docs/${defaultItem.id}.html`}
-                    key={section.title}
-                  >
-                    {section.title}
-                  </FooterLink>
-                )
-              })}
-            </FooterNav>
+          <FooterNav layoutHasSidebar={layoutHasSidebar}>
+            <MetaTitle onDark={true}>{navFooter.docs.title}</MetaTitle>
+            {sectionListDocs.map(section => {
+              const defaultItem = section.items[0]
+              return (
+                <FooterLink
+                  to={`/docs/${defaultItem.id}.html`}
+                  key={section.title}
+                >
+                  {section.title}
+                </FooterLink>
+              )
+            })}
+          </FooterNav>
 
-            <FooterNav layoutHasSidebar={layoutHasSidebar}>
-              <MetaTitle onDark={true}>{navFooter.more.title}</MetaTitle>
-              <SectionLinks links={navFooter.more.items} />
-            </FooterNav>
-            <FooterNav layoutHasSidebar={layoutHasSidebar}>
-              <MetaTitle onDark={true}>{navFooter.legal.title}</MetaTitle>
-              <SectionLinks links={navFooter.legal.items} />
-            </FooterNav>
-          </div>
-          <div
+          <FooterNav layoutHasSidebar={layoutHasSidebar}>
+            <MetaTitle onDark={true}>{navFooter.more.title}</MetaTitle>
+            <SectionLinks links={navFooter.more.items} />
+          </FooterNav>
+          <FooterNav layoutHasSidebar={layoutHasSidebar}>
+            <MetaTitle onDark={true}>{navFooter.legal.title}</MetaTitle>
+            <SectionLinks links={navFooter.legal.items} />
+          </FooterNav>
+        </div>
+        <div
+          css={{
+            paddingTop: "2rem",
+            color: colors.subtleOnDark,
+            fontSize: 10,
+            textAlign: "center",
+          }}
+        >
+          <p
             css={{
-              paddingTop: "2rem",
+              fontSize: 12,
               color: colors.subtleOnDark,
-              fontSize: 10,
-              textAlign: "center",
+              paddingTop: 15,
             }}
           >
-            <p
-              css={{
-                color: colors.subtleOnDark,
-                paddingTop: 15,
-              }}
-            >
-              {`© ${new Date().getFullYear()} Network Chimp`}
-            </p>
-          </div>
+            {`© ${new Date().getFullYear()} Network Chimp`}
+          </p>
         </div>
       </div>
+      {/* </div> */}
     </Container>
   </footer>
 )

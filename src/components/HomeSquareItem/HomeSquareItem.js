@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import Flex from "../Flex"
 import { media } from "../../theme"
 import HomeSquareItemContent from "./HomeSquareItemContent"
@@ -124,7 +124,7 @@ const HomeSquareItem = ({
   header,
   text,
   link = null,
-  flippedContent = <div>Test</div>,
+  flippedContent,
 }) => {
   const content = (
     <Content
@@ -161,6 +161,7 @@ const HomeSquareItem = ({
             color: "inherit!important",
           }}
           target="_blank"
+          rel="noopener"
           href={link}
         >
           {content}

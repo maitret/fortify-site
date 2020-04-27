@@ -4,9 +4,10 @@ import { Layout } from "antd"
 import { colors } from "../../theme"
 import LayoutHeader from "../LayoutHeader/Header"
 import LayoutFooter from "../LayoutFooter/Footer"
-import PageLayoutCSS from "./PageLayout.scss"
 
-const { Header, Footer, Content } = Layout
+import "./PageLayout.scss"
+
+const { Content } = Layout
 
 const PageLayout = ({ children }) => (
   <Layout

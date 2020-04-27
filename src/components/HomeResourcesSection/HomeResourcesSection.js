@@ -2,18 +2,15 @@ import React from "react"
 import Flex from "../Flex"
 import HomeSquareItem from "../HomeSquareItem"
 import HomeSectionHeader from "../HomeSectionHeader"
-import HomeSectionLargeText from "../HomeSectionLargeText"
 
-import { media, colors } from "../../theme"
+import { meta, media, colors } from "../../theme"
 
-import ScreenShotSmall from "../../images/screenshot-small.png"
-import { Question, Medium, Book, Github, Exit } from "../../svg"
+import { Question, MachineLearning, Book, Github } from "../../svg"
 
 const HomeResourcesSection = () => {
   return (
     <Flex
       id="resources"
-      className="resources"
       halign="center"
       direction="column"
       css={{
@@ -30,25 +27,10 @@ const HomeResourcesSection = () => {
           margin: "0 auto",
         }}
       >
-        <Flex
-          className="resources__container"
-          halign="center"
-          direction="column"
-        >
-          <Flex
-            className="resources__description"
-            direction="column"
-            css={{
-              width: "83.333%",
-              [media.lessThan("medium")]: {
-                width: "100%!important",
-              },
-            }}
-          >
-            <HomeSectionHeader text="# RESOURCES" />
-            <HomeSectionLargeText text="Browse our resources to get started with Networkchimp." />
-          </Flex>
-        </Flex>
+        <HomeSectionHeader
+          title="# RESOURCES"
+          text={`Browse our resources to get started with ${meta.app.title}.`}
+        />
 
         <Flex
           className="resources__resources"
@@ -77,7 +59,8 @@ const HomeResourcesSection = () => {
               <HomeSquareItem
                 backgroundColor={colors.greyBlue}
                 logo={Question}
-                text="Frequently Asked Questions"
+                header="FAQ"
+                text="Have a question? We may already have an answer."
               />
             </Flex>
 
@@ -89,8 +72,9 @@ const HomeResourcesSection = () => {
             >
               <HomeSquareItem
                 backgroundColor={colors.greyBlue}
-                logo={Medium}
-                text="Explore our blog articles for news and usage tips."
+                logo={MachineLearning}
+                header="Learn"
+                text="Explore our tutorials and demos for detailed walkthroughs."
               />
             </Flex>
           </div>
@@ -119,11 +103,10 @@ const HomeResourcesSection = () => {
               >
                 <HomeSquareItem
                   backgroundColor={colors.greyBlue}
-                  title={<img src={Exit} alt="exit" />}
                   link="https://www.google.com"
                   logo={Book}
                   header="Docs"
-                  text="Check our documentation to get all your devices up and running in a matter of minutes."
+                  text={`Check our documentation for detailed information about ${meta.app.title}.`}
                 />
               </Flex>
               <Flex
@@ -133,11 +116,10 @@ const HomeResourcesSection = () => {
               >
                 <HomeSquareItem
                   backgroundColor={colors.greyBlue}
-                  title={<img src={Exit} alt="exit" />}
                   link="https://www.google.com"
                   logo={Github}
                   header="Contribute"
-                  text="Help us improving Networkchip by submitting bugs and feature requests on GitHub."
+                  text={`Help us improve ${meta.app.title} by submitting bugs and feature requests on GitHub.`}
                 />
               </Flex>
             </Flex>

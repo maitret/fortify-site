@@ -4,6 +4,7 @@ import { DocsLayout } from "../components/Layout"
 import MarkdownPage from "../components/MarkdownPage"
 import { createLinkBlog } from "..//utils/createLink"
 import configs from "../../site-config"
+import { meta } from "../theme"
 
 const toSectionList = allMarkdownData => [
   {
@@ -31,7 +32,7 @@ const Blog = ({ data, location }) => (
       markdownData={data.mdx}
       metaKeywords={configs.blog_keywords}
       sectionList={toSectionList(data.allMdx)}
-      titlePostfix=" &ndash; Static.site Blog"
+      titlePostfix={` &ndash; ${meta.app.title} Blog`}
     />
   </DocsLayout>
 )

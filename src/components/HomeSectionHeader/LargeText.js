@@ -1,7 +1,7 @@
 import React from "react"
 import { media } from "../../theme"
 
-const HomeSectionLargeText = ({ text = "", customStyles = {} }) => {
+const LargeText = ({ text = "", customStyles = {} }) => {
   return (
     <p
       css={{
@@ -24,4 +24,4 @@ const HomeSectionLargeText = ({ text = "", customStyles = {} }) => {
   )
 }
 
-export default HomeSectionLargeText
+export default LargeText
