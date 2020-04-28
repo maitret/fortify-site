@@ -77,7 +77,7 @@ const HomePricingSection = () => {
               width: "33%",
               boxShadow: "0 10px 60px 0 rgba(158,161,184,.4)",
               [media.size("xsmall")]: {
-                width: "45%!important",
+                width: "50%!important",
               },
             }}
           />
@@ -165,27 +165,32 @@ const HomePricingSection = () => {
               <button
                 onClick={handlePlanClick}
                 css={{
-                  display: "flex",
-                  justifyContent: "center",
-                  width: "100%",
-                  backgroundColor: "#91939e",
-                  borderColor: "transparent",
-                  color: "#fff",
-                  fontWeight: "bold",
-                  padding: "5px 0",
-                  fontSize: "18px",
-                  borderRadius: "5px",
-                  outline: "none",
-                  transition: "300ms all ease",
-                  ":hover": {
-                    background: colors.brand,
-                    color: "white",
-                    cursor: "pointer",
-                  },
-                  [media.size("xsmall")]: {
-                    fontSize: "14px",
-                  },
+                  transition: "all 0.75s",
+                  border: "1px solid black",
                 }}
+                className="button  is-fullwidth is-primary"
+                // css={{
+                //   display: "flex",
+                //   justifyContent: "center",
+                //   width: "100%",
+                //   backgroundColor: "#91939e",
+                //   borderColor: "transparent",
+                //   color: "#fff",
+                //   fontWeight: "bold",
+                //   padding: "5px 0",
+                //   fontSize: "18px",
+                //   borderRadius: "5px",
+                //   outline: "none",
+                //   transition: "300ms all ease",
+                //   ":hover": {
+                //     background: colors.brand,
+                //     color: "white",
+                //     cursor: "pointer",
+                //   },
+                //   [media.size("xsmall")]: {
+                //     fontSize: "14px",
+                //   },
+                // }}
               >
                 Get Started
               </button>
@@ -195,7 +200,8 @@ const HomePricingSection = () => {
               marginTop: "-9px",
               boxShadow: "0 10px 60px 0 rgba(158,161,184,.4)",
               [media.size("xsmall")]: {
-                width: "30%!important",
+                width: "50%!important",
+                margin: "0 5px",
               },
             }}
           />

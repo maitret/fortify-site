@@ -121,10 +121,12 @@ const HomeSquareItem = ({
   backgroundColor,
   title,
   logo,
+  icon,
   header,
   text,
   link = null,
   flippedContent,
+  ...rest
 }) => {
   const content = (
     <Content
@@ -133,10 +135,23 @@ const HomeSquareItem = ({
       title={title}
     >
       {children ? (
-        children
+        <>
+          <HomeSquareItemContent
+            title={header}
+            text={text}
+            logo={logo}
+            icon={icon}
+          />
+          {children}
+        </>
       ) : (
         <Flex valign="center">
-          <HomeSquareItemContent title={header} text={text} logo={logo} />
+          <HomeSquareItemContent
+            title={header}
+            text={text}
+            logo={logo}
+            icon={icon}
+          />
         </Flex>
       )}
     </Content>
@@ -144,6 +159,7 @@ const HomeSquareItem = ({
 
   return (
     <div
+      {...rest}
       css={{
         width: "100%",
         height: "100%",

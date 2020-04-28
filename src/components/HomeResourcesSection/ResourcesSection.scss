@@ -1,0 +1,34 @@
+.resources-mailing-list,
+.resources-follow-twitter {
+  input {
+    outline: none;
+    transition: 0.8s all;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid hsl(233, 15%, 67%);
+    &::placeholder {
+      color: hsl(233, 15%, 67%);
+    }
+  }
+
+  .icon {
+    color: hsl(233, 15%, 67%);
+    &:hover {
+      color: #f2f4f8 !important;
+    }
+  }
+  .sign-up-button {
+    transition: 0.8s all;
+    background: rgba(0, 0, 0, 0) !important;
+    border: 1px solid hsl(233, 15%, 67%);
+    color: hsl(233, 15%, 67%);
+  }
+
+  .is-hovered {
+    transition: 0.8s all;
+    border-color: #f2f4f8 !important;
+    color: #f2f4f8 !important;
+    &::placeholder {
+      color: #f2f4f8;
+    }
+  }
+}

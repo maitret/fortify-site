@@ -20,7 +20,7 @@ const Header = ({ location }) => {
         top: 0,
         left: 0,
         right: 0,
-        padding: "0 30px",
+        padding: "0 1rem",
         "@media print": {
           display: "none",
         },
@@ -182,9 +182,21 @@ const Header = ({ location }) => {
           <HeaderLink isAnchor offset="40" title="Pricing" to="#pricing" />
           <button
             onClick={openSidebar}
+            css={{
+              marginLeft: "1rem",
+              transition: "all 0.75s",
+
+              [media.lessThan("small")]: {
+                marginTop: 10,
+                marginRight: 30,
+              },
+            }}
             className="button is-primary is-outlined"
           >
-            Have a question?
+            <span class="icon is-small">
+              <i class="far fa-comment-alt"></i>
+            </span>
+            <span>Have a question?</span>
           </button>
         </nav>
       </div>

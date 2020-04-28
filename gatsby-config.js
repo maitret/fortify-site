@@ -76,12 +76,12 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: "gatsby-plugin-antd",
-      options: {
-        style: true,
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-antd",
+    //   options: {
+    //     style: true,
+    //   },
+    // },
     "gatsby-transformer-sharp",
     {
       resolve: `gatsby-plugin-less`,

@@ -1,5 +1,5 @@
 import React from "react"
-import { Tooltip } from "antd"
+// import { Tooltip } from "antd"
 import Flex from "../Flex"
 import VideoGallery from "../VideoGallery"
 import { CloudflareLogo, BackgroundLines } from "../../svg"
@@ -95,7 +95,7 @@ const HomeHeroSection = () => {
               Install on Cloudflare
             </a>
           </Flex>
-          <Tooltip
+          {/* <Tooltip
             placement="bottom"
             title={`${meta.app.title} can be installed on any Cloudflare-enabled website in a few clicks.`}
             arrowPointAtCenter
@@ -118,7 +118,7 @@ const HomeHeroSection = () => {
             >
               Install on Cloudflare?
             </a>
-          </Tooltip>
+          </Tooltip> */}
         </Flex>
       </Flex>
 

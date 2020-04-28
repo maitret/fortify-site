@@ -1,8 +1,8 @@
-import React from "react"
+import React, { cloneElement } from "react"
 import Flex from "../Flex"
 import { media } from "../../theme"
 
-const HomeSquareItemContent = ({ logo, title, text }) => (
+const HomeSquareItemContent = ({ logo, icon, title, text }) => (
   <Flex
     direction="column"
     css={{
@@ -19,6 +19,13 @@ const HomeSquareItemContent = ({ logo, title, text }) => (
         src={logo}
       />
     )}
+    {icon &&
+      cloneElement(icon, {
+        style: {
+          marginBottom: "12px",
+          color: "white",
+        },
+      })}
     {title && (
       <span
         css={{

@@ -19,7 +19,7 @@ const PaymentModal = ({ rootRef }) => {
 
   return (
     <div ref={rootRef} className="payment-modal modal">
-      <div className="modal-background"></div>
+      <div onClick={handleExitClick} className="modal-background"></div>
       <div className="modal-card" css={{ borderRadius: 10 }}>
         <header
           css={{ backgroundColor: colors.brand }}
@@ -35,7 +35,7 @@ const PaymentModal = ({ rootRef }) => {
               <img
                 alt="logo"
                 src={AppIcon}
-                css={{ width: 120, marginRight: "1rem" }}
+                css={{ width: 74, marginRight: "1rem" }}
               />
               <div
                 css={{
@@ -44,10 +44,10 @@ const PaymentModal = ({ rootRef }) => {
                 }}
               >
                 <p css={{ color: colors.lightHighlight }} className="is-size-4">
-                  Let's set up your {meta.app.title} plan.
+                  Welcome to {meta.app.title}.
                 </p>
                 <p css={{ color: colors.lightHighlight }} className="is-size-6">
-                  Enrollment takes about 3 minutes.
+                  Let's set up your plan.
                 </p>
               </div>
             </div>
