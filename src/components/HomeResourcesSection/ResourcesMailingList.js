@@ -27,8 +27,10 @@ const ResourcesMailingList = () => {
 
   const handleContactUs = async (_, event) => {
     event.preventDefault()
-    debugger
+
     const [emailEntry] = Array.from(new FormData(event.target).entries())
+
+    if (!emailEntry) return
 
     const status = await Subscribe(emailEntry[1])
     setDidSubscribe(status)
@@ -36,7 +38,7 @@ const ResourcesMailingList = () => {
 
   return (
     <HomeSquareItem
-      backgroundColor={colors.greyBlue}
+      backgroundColor="transparent"
       header="Join the mailing list"
       text="Get the latest product updates by joining our mailing list"
       onMouseEnter={onMouseover}

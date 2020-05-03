@@ -4,17 +4,16 @@ import { useForm } from "react-hook-form"
 import emailValidator from "email-validator"
 import Paddle from "../Paddle"
 import plans from "../../plans"
-import { globalWindow } from "../../utils/window"
 import { meta } from "../../theme"
+import { globalWindow } from "../../utils/window"
 
 const PricingForm = ({ onCheckoutSuccess, onCancel }) => {
   const [registeredDomains, setRegisteredDomains] = useState([])
-  const [billingInterval, setBillingInterval] = useState("monthly")
 
   const plan = useMemo(
     () =>
       registeredDomains.length
-        ? plans.perDomain[registeredDomains.length - 1]
+        ? plans.productConfig[registeredDomains.length - 1]
         : undefined,
     [registeredDomains.length]
   )
@@ -33,11 +32,12 @@ const PricingForm = ({ onCheckoutSuccess, onCancel }) => {
       ...(false ? { coupon: "" } : {}),
       email: data.emailAddress,
       successCallback: onCheckoutSuccess,
-      product: plan.billingInterval[billingInterval].paddleId,
+      product: plan.planId,
       passthrough: JSON.stringify({
         appName: meta.app.slug,
         domains: registeredDomains,
-        productEmailOptedIn: !!data.productEmailOptedIn,
+        productComms: !!data.productComms,
+        generalComms: !!data.generalComms,
       }),
     })
   }
@@ -92,7 +92,11 @@ const PricingForm = ({ onCheckoutSuccess, onCancel }) => {
             </div>
 
             <div className="control">
-              <button className="button is-primary" onClick={addDomain}>
+              <button
+                type="button"
+                className="button is-primary"
+                onClick={addDomain}
+              >
                 Add Domain
               </button>
             </div>
@@ -161,54 +165,6 @@ const PricingForm = ({ onCheckoutSuccess, onCancel }) => {
             </span>
           </div>
         </div>
-        <div className="field fields has-text-left">
-          <label className="label">Billing interval</label>
-          <p className="help">Billing begins at the end of your free trial.</p>
-
-          <div className="buttons has-addons">
-            <button
-              type="button"
-              style={{ width: "50%" }}
-              className={`button ${
-                billingInterval === "monthly" ? `is-primary` : ""
-              }`}
-              onClick={() => setBillingInterval("monthly")}
-            >
-              Monthly
-            </button>
-            <button
-              type="button"
-              style={{ width: "50%" }}
-              className={`button ${
-                billingInterval === "monthly" ? "" : `is-primary`
-              }`}
-              onClick={() => setBillingInterval("yearly")}
-            >
-              Yearly{" "}
-              <sup css={{ marginLeft: 2, fontVariant: "small-caps" }}>
-                save 10%
-              </sup>
-            </button>
-          </div>
-        </div>
-
-        <div className="field">
-          <div className="b-checkbox is-primary">
-            <input
-              id="productEmailOptedIn"
-              name="productEmailOptedIn"
-              type="checkbox"
-              className="styled"
-              ref={register({ required: false })}
-            />
-            <label htmlFor="productEmailOptedIn">
-              <span className="is-size-7" style={{ paddingLeft: 6 }}>
-                Inform me when new {meta.app.title} features and updates are
-                released.
-              </span>
-            </label>
-          </div>
-        </div>
         <div className="field">
           <div className="b-checkbox is-primary">
             <input
@@ -219,43 +175,81 @@ const PricingForm = ({ onCheckoutSuccess, onCancel }) => {
               ref={register({ required: true })}
             />
             <label htmlFor="agreementCheckbox">
-              <span className="is-size-7" style={{ paddingLeft: 6 }}>
-                My website is on Cloudflare and I agree to Network Chimp's{" "}
+              <span className="is-size-6" style={{ paddingLeft: 6 }}>
+                <span
+                  className="is-size-6"
+                  style={{ fontStyle: "italic", paddingLeft: 6 }}
+                >
+                  My website is on Cloudflare
+                </span>{" "}
+                and I agree to Network Chimp's{" "}
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href="/legal/terms-of-service"
                 >
-                  Terms of Service
-                </a>
-                .
+                  Terms of Service.
+                </a>{" "}
+                (required)
               </span>
             </label>
           </div>
         </div>
+        <div className="field">
+          <div className="b-checkbox is-primary">
+            <input
+              id="productComms"
+              name="productComms"
+              type="checkbox"
+              className="styled"
+              ref={register({ required: false })}
+            />
+            <label htmlFor="productComms">
+              <span className="is-size-6" style={{ paddingLeft: 6 }}>
+                Inform me when new {meta.app.title} tips, features, and
+                tutorials are released (recommended)
+              </span>
+            </label>
+          </div>
+        </div>
+        <div className="field">
+          <div className="b-checkbox is-primary">
+            <input
+              id="generalComms"
+              name="generalComms"
+              type="checkbox"
+              className="styled"
+              ref={register({ required: false })}
+            />
+            <label htmlFor="generalComms">
+              <span className="is-size-6" style={{ paddingLeft: 6 }}>
+                Send me occasional emails about all Network Chimp products,
+                promotions, and discounts
+              </span>
+            </label>
+          </div>
+        </div>
+
         <div
           css={{ marginTop: "2rem" }}
           className="level"
           style={{ justifyContent: "space-between" }}
         >
           <div className="level-right">
-            <div className="field">
-              <input
-                type="submit"
-                value="Continue"
-                className="button is-primary is-medium"
-                disabled={
-                  Object.keys(errors).length || !registeredDomains.length
-                }
-              />
-              <button
-                onClick={onCancel}
-                css={{ marginLeft: "1rem" }}
-                className="button is-primary is-medium is-outlined"
-              >
-                Cancel
-              </button>
-            </div>
+            <input
+              type="submit"
+              value="Continue"
+              className="button is-primary is-medium"
+              disabled={Object.keys(errors).length || !registeredDomains.length}
+            />
+            <button
+              type="button"
+              onClick={onCancel}
+              css={{ marginLeft: "1rem" }}
+              className="button is-primary is-medium is-outlined"
+            >
+              Cancel
+            </button>
           </div>
         </div>
       </form>

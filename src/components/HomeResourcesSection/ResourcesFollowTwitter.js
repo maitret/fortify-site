@@ -1,7 +1,6 @@
 import React from "react"
 import HomeSquareItem from "../HomeSquareItem"
 import { colors } from "../../theme"
-
 import "./ResourcesSection.scss"
 
 const ResourcesFollowTwitter = () => (

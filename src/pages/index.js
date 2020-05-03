@@ -38,9 +38,9 @@ const IndexPage = () => (
         <HomeResourcesSection />
       </HomeSectionLayout>
 
-      <HomeSectionLayout>
+      {/* <HomeSectionLayout>
         <HomeTwitterSection />
-      </HomeSectionLayout>
+      </HomeSectionLayout> */}
     </div>
   </PageLayout>
 )

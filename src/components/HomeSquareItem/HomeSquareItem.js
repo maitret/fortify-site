@@ -5,6 +5,30 @@ import HomeSquareItemContent from "./HomeSquareItemContent"
 
 import "./HomeSquareItem.css"
 
+const CardFace = ({ backgroundColor, className, css = {}, children }) => (
+  <Flex
+    className={`card ${className}`}
+    direction="column"
+    valign="center"
+    css={{
+      width: "100%",
+      height: "100%",
+      background: backgroundColor,
+      border: "1px solid #313131",
+      transition: "300ms all ease",
+      ":hover": {
+        borderColor: "#f2f4f8",
+        boxShadow: " 0 15px 90px 0 rgba(35, 38, 60, .75)",
+      },
+      borderRadius: "4px",
+      padding: "13px 20px",
+      position: "relative",
+      ...css,
+    }}
+  >
+    {children}
+  </Flex>
+)
 const Content = ({
   title,
   backgroundColor = "transparent",
@@ -41,7 +65,6 @@ const Content = ({
             ".card__back": {
               WebkitTransform: flippedContent ? "rotateY(0)" : "initial",
               transform: flippedContent ? "rotateY(0)" : "initial",
-              background: "blue",
             },
           },
           ".card": {
@@ -52,25 +75,7 @@ const Content = ({
           },
         }}
       >
-        <Flex
-          className="card card__face"
-          direction="column"
-          valign="center"
-          css={{
-            width: "100%",
-            height: "100%",
-            background: backgroundColor,
-            border: "1px solid #313131",
-            transition: "300ms all ease",
-            borderRadius: "4px",
-            padding: "13px 20px",
-            position: "relative",
-            ":hover": {
-              borderColor: "#f2f4f8",
-              boxShadow: " 0 15px 90px 0 rgba(35, 38, 60, .75)",
-            },
-          }}
-        >
+        <CardFace className="card__face" backgroundColor={backgroundColor}>
           {children}
 
           {title && (
@@ -90,10 +95,9 @@ const Content = ({
               {title}
             </span>
           )}
-        </Flex>
-
+        </CardFace>
         {flippedContent && (
-          <div
+          <CardFace
             css={{
               WebkitTransform: "rotateY(180deg)",
               transform: "rotateY(180deg)",
@@ -105,11 +109,13 @@ const Content = ({
               top: 0,
               borderRadius: "4px",
               padding: "10px",
+              backgroundColor: backgroundColor,
             }}
-            className="card card__back"
+            className="card__back"
+            backgroundColor={backgroundColor}
           >
             {flippedContent}
-          </div>
+          </CardFace>
         )}
       </Flex>
     </div>

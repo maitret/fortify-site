@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.7.4",
+    "@creativebulma/bulma-tooltip": "^1.0.2",
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.27",
     "@emotion/styled-base": "^10.0.24",
@@ -72,6 +73,7 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-animate-height": "^2.0.17",
     "react-dom": "^16.12.0",
+    "react-dropdown": "^1.7.0",
     "react-feather": "^2.0.3",
     "react-helmet": "^5.2.1",
     "react-hook-form": "^5.5.3",

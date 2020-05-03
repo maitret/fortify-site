@@ -2,17 +2,22 @@ import React from "react"
 import Flex from "../Flex"
 import HomeSquareItem from "../HomeSquareItem"
 import HomeSectionHeader from "../HomeSectionHeader"
-import ScreenShotSmall from "../../images/screenshot-small.png"
+import PortzillaConfig from "../../../static/portzilla-config.png"
 import { media, colors, meta } from "../../theme"
 
-import {
-  Themes,
-  SmallLogo,
-  ComputerLogo,
-  ReverseTime,
-  Time,
-  Menu,
-} from "../../svg"
+const featuresText = (
+  <>
+    <div>
+      {meta.app.title} is a network-level reverse proxy for sending incoming
+      traffic to other services on your domain
+    </div>
+    <div css={{ marginTop: "1rem" }}>
+      <pre css={{ backgroundColor: "transparent", letterSpacing: "0.01rem" }}>
+        torrent.nwc.com ⟶ 172.132.921:8787
+      </pre>
+    </div>
+  </>
+)
 
 const HomeFeaturesSection = () => {
   return (
@@ -34,12 +39,7 @@ const HomeFeaturesSection = () => {
           margin: "0 auto",
         }}
       >
-        <HomeSectionHeader
-          title="# FEATURES"
-          text={`${meta.app.title} is a cloud-based job manager that offers device
-          synchronization and reliable message delivery in a network of
-          connected devices even after connectivity issues.`}
-        />
+        <HomeSectionHeader title="# FEATURES" text={featuresText} />
 
         <Flex
           className="features__features"
@@ -82,50 +82,35 @@ const HomeFeaturesSection = () => {
                 <div
                   css={{
                     width: "100%",
-                    height: "20%",
                     borderRadius: "4px",
                   }}
                 >
                   <HomeSquareItem
                     backgroundColor={colors.greyBlue}
-                    flippedContent=""
-                  >
-                    <Flex valign="center">
-                      <img
-                        css={{
-                          width: "18px",
-                          marginRight: "10px",
-                        }}
-                        src={SmallLogo}
-                        alt="compact logo"
-                      />
-                      <span
-                        css={{
-                          fontSize: "1.5rem",
-                          fontWeight: "bold",
-                          color: "#9ea1b8",
-                        }}
-                      >
-                        Compact mode
-                      </span>
-                    </Flex>
-                  </HomeSquareItem>
+                    icon={<i className="fas fa-3x fa-cogs"></i>}
+                    header="Unlimited Configurations"
+                    text="Want to proxy multiple ports on the same domain? Configure as many as you need."
+                  />
                 </div>
 
                 <div
                   css={{
                     width: "100%",
-                    height: "80%",
                   }}
                 >
-                  <HomeSquareItem backgroundColor={colors.greyBlue}>
+                  <HomeSquareItem
+                    header="Intuitive UI"
+                    text="Set up Portzilla in a few minutes with our easy to use user interface"
+                    backgroundColor={colors.greyBlue}
+                  >
                     <img
                       css={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "cover",
+                        border: "1rem solid black",
+                        borderRadius: "1rem",
                       }}
-                      src={ScreenShotSmall}
+                      src={PortzillaConfig}
                       alt="Screenshot small"
                     />
                   </HomeSquareItem>
@@ -145,9 +130,9 @@ const HomeFeaturesSection = () => {
                 >
                   <HomeSquareItem
                     backgroundColor={colors.greyBlue}
-                    logo={ComputerLogo}
-                    header="Device sync"
-                    text="View and execute jobs from any authorized devices."
+                    icon={<i className="fas fa-3x fa-pencil-alt"></i>}
+                    header="Custom request headers"
+                    text="Append any number of custom request headers to proxied requests"
                   />
                 </div>
 
@@ -159,9 +144,9 @@ const HomeFeaturesSection = () => {
                 >
                   <HomeSquareItem
                     backgroundColor={colors.greyBlue}
-                    logo={ReverseTime}
-                    header="Activity logs"
-                    text="Timestamped and uniquely identified output logs."
+                    icon={<i className="fas fa-3x fa-bug"></i>}
+                    header="Custom error pages"
+                    text="Set up custom error pages for services that aren't responding or use our default error page"
                   />
                 </div>
               </div>
@@ -175,9 +160,9 @@ const HomeFeaturesSection = () => {
             >
               <HomeSquareItem
                 backgroundColor={colors.greyBlue}
-                logo={Themes}
-                header="Themes"
-                text="A diverse set of dark themes available for choosing."
+                icon={<i className="fab fa-3x fa-react"></i>}
+                header="Single Page App Mode"
+                text="Using a modern Javascript frontend like React or VueJS?  Proxy it with Portzilla in a few clicks"
               />
             </div>
           </div>
@@ -199,28 +184,20 @@ const HomeFeaturesSection = () => {
                 flexDirection: "column",
               }}
             >
-              <div
-                css={{
-                  flex: 1,
-                }}
-              >
+              <div css={{ flex: 1 }}>
                 <HomeSquareItem
                   backgroundColor="transparent"
-                  logo={Time}
-                  header="Scheduled Jobs"
-                  text="Schedule your jobs for execution on specific dates and times. You can also define the devices in which the job will be executed."
+                  icon={<i className="fas fa-3x fa-broadcast-tower"></i>}
+                  header="Proxy anywhere"
+                  text="Want to proxy a port unsupported by Cloudflare? Use Portzilla to proxy any port on your domain."
                 />
               </div>
-              <div
-                css={{
-                  flex: 1,
-                }}
-              >
+              <div css={{ flex: 1 }}>
                 <HomeSquareItem
                   backgroundColor="transparent"
-                  logo={Menu}
-                  header="Parallel Execution"
-                  text="Have your nonconcurrent jobs run in parallel to get the most of the processing power available."
+                  icon={<i className="fas fa-3x fa-globe"></i>}
+                  header="Proxy any way"
+                  text="Portzilla proxies any subdomain or subpath on your domain"
                 />
               </div>
             </div>

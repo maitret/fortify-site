@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Solway&display=swap");
 @import "../../css/variables.scss";
 @import "~bulma/bulma.sass";
+@import "~@creativebulma/bulma-tooltip";
 
 ::selection {
   background: $primary;
