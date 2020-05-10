@@ -64,7 +64,7 @@ const VideoGallery = ({ sourceList, ...reactPlayerProps }) => {
       <div
         css={{
           display: "flex",
-          justifyContent: "flex-end",
+          justifyContent: "center",
           backgroundColor: "black",
         }}
       >

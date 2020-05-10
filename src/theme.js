@@ -1,21 +1,20 @@
-/**
- * Theme contains variables shared by styles of multiple components.
- */
-
 const hex2rgba = require("hex2rgba")
 
 const meta = {
   app: {
     slug: "portzilla",
     title: "Portzilla",
-    description: "Proxy traffic to any service on your domain without NGINX",
+    description:
+      "A powerful reverse proxy to send incoming traffic to multiple services on your domain",
     fontFamily: `'Solway', -apple-system, BlinkMacSystemFont, "Segoe UI"`,
-    pricePerDomain: 4.99,
   },
 }
 
 const colors = {
-  brand: "#72ba81", // electric blue
+  brand: "#72ba81",
+  codeVariable: "#3f9cd6",
+  cloudflare: "#f4801f",
+  cloudflareLight: "hsl(28,90%,25%)",
   lighter: "#373940", // light blue
   dark: "#282c34", // dark blue
   darker: "#20232a", // really dark blue,

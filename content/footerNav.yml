@@ -1,22 +1,38 @@
 docs:
   title: Docs
+  items:
+    - title: How to install
+      external: true
+      to: https://networkchimp.com/docs/portzilla.html#how-to-install
+    - title: Getting started
+      external: true
+      to: https://networkchimp.com/docs/portzilla.html#getting-started
+    - title: Configuration
+      external: true
+      to: https://networkchimp.com/docs/portzilla.html#configuration
 
 legal:
   title: Legal
   items:
     - title: Term of Service
-      to: /legal/terms-of-service
+      external: true
+      to: https://networkchimp.com/terms-of-service.html
     - title: Privacy Policy
-      to: /legal/privacy-policy
+      external: true
+      to: https://networkchimp.com/privacy-policy.html
     - title: Cookie Policy
-      to: /legal/cookie-policy
+      external: true
+      to: https://networkchimp.com/cookie-policy.html
 
 more:
   title: More
   items:
     - title: FAQ
-      to: /faq
+      external: true
+      to: https://networkchimp.com/docs/portzilla.html#faq
     - title: Contribute
+      external: true
       to: /contribute
     - title: Learn
-      to: /learn
+      external: true
+      to: https://networkchimp.com/tutorials/portzilla-api.html

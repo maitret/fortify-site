@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { Helmet } from "react-helmet"
 import { globalWindow } from "../utils/window"
 import plans from "../plans"
@@ -13,10 +13,18 @@ export const Subscribe = (email, marketingConsent = true) =>
   })
 
 const Paddle = () => {
+  const [initCounter, setInitCounter] = useState(0)
+
   useEffect(() => {
-    globalWindow.Paddle &&
-      globalWindow.Paddle.Setup({ vendor: plans.paddle.vendorId })
-  }, [])
+    const interval = setTimeout(() => {
+      if (initCounter > 10) clearTimeout(interval)
+
+      setInitCounter(initCounter + 1)
+
+      globalWindow.Paddle &&
+        globalWindow.Paddle.Setup({ vendor: plans.paddle.vendorId })
+    }, 2000)
+  }, [initCounter])
 
   return (
     <Helmet>

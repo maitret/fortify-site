@@ -5,17 +5,16 @@ import { AppIcon } from "../../svg"
 
 import "./PaymentModal.scss"
 
-const PaymentModal = ({ rootRef }) => {
+const PaymentModal = ({ rootRef, onCheckoutSuccess }) => {
   const handleExitClick = () => {
     rootRef.current && rootRef.current.classList.remove("is-active")
   }
 
-  const scrollToResources = () => {
+  const scrollToResources = () =>
     document.querySelector("#resources").scrollIntoView({
       behavior: "smooth",
       block: "start",
     })
-  }
 
   return (
     <div ref={rootRef} className="payment-modal modal">
@@ -59,7 +58,11 @@ const PaymentModal = ({ rootRef }) => {
         >
           <PricingForm
             onCancel={handleExitClick}
-            onCheckoutSuccess={() => handleExitClick() && scrollToResources()}
+            onCheckoutSuccess={() => {
+              handleExitClick()
+              scrollToResources()
+              onCheckoutSuccess()
+            }}
           />
         </section>
       </div>

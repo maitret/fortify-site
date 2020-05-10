@@ -30,7 +30,7 @@ const HomeResourcesSection = () => (
     >
       <HomeSectionHeader
         title="# RESOURCES"
-        text={`Browse our resources to get started with ${meta.app.title}.`}
+        text={`Browse our resources for documentation, tutorials and more about ${meta.app.title}.`}
       />
 
       <Flex
@@ -59,9 +59,10 @@ const HomeResourcesSection = () => (
           >
             <HomeSquareItem
               backgroundColor={colors.greyBlue}
-              logo={Question}
-              header="FAQ"
-              text="Have a question? We may already have an answer."
+              logo={MachineLearning}
+              header="Learn"
+              link="https://www.networkchimp.com/tutorials/portzilla-api.html"
+              text={`Explore ${meta.app.title} tutorials and demos for detailed walkthroughs.`}
             />
           </Flex>
 
@@ -73,9 +74,10 @@ const HomeResourcesSection = () => (
           >
             <HomeSquareItem
               backgroundColor={colors.greyBlue}
-              logo={MachineLearning}
-              header="Learn"
-              text="Explore our tutorials and demos for detailed walkthroughs."
+              logo={Question}
+              header="FAQ"
+              link="https://networkchimp.com/docs/portzilla.html#faq"
+              text="Have a question? We may already have an answer."
             />
           </Flex>
         </div>
@@ -103,8 +105,8 @@ const HomeResourcesSection = () => (
               }}
             >
               <HomeSquareItem
-                backgroundColor={colors.greyBlue}
-                link="https://www.google.com"
+                backgroundColor="transparent"
+                link={`https://www.networkchimp.com/docs/${meta.app.slug}.html`}
                 logo={Book}
                 header="Docs"
                 text={`Check our documentation for detailed information about ${meta.app.title}.`}

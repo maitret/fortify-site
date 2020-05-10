@@ -1,11 +1,11 @@
 import Container from "../Container"
-import FooterLink from "./FooterLink"
+
 import FooterNav from "./FooterNav"
 import MetaTitle from "../../templates/components/MetaTitle"
 import SectionLinks from "./SectionLinks"
 import React from "react"
 import { colors, media } from "../../theme"
-import { sectionListDocs } from "../../utils/sectionList"
+
 import navFooter from "../../../content/footerNav.yml"
 
 const Footer = ({ layoutHasSidebar = false }) => (
@@ -68,7 +68,7 @@ const Footer = ({ layoutHasSidebar = false }) => (
         >
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>{navFooter.docs.title}</MetaTitle>
-            {sectionListDocs.map(section => {
+            {/* {sectionListDocs.map(section => {
               const defaultItem = section.items[0]
               return (
                 <FooterLink
@@ -78,7 +78,8 @@ const Footer = ({ layoutHasSidebar = false }) => (
                   {section.title}
                 </FooterLink>
               )
-            })}
+            })} */}
+            <SectionLinks links={navFooter.docs.items} />
           </FooterNav>
 
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
@@ -105,7 +106,18 @@ const Footer = ({ layoutHasSidebar = false }) => (
               paddingTop: 15,
             }}
           >
-            {`© ${new Date().getFullYear()} Network Chimp`}
+            {`© ${new Date().getFullYear()} `}
+            <a
+              css={{
+                color: colors.brand,
+                "&:hover": {
+                  color: colors.cloudflare,
+                },
+              }}
+              href="https://www.networkchimp.com"
+            >
+              Network Chimp
+            </a>
           </p>
         </div>
       </div>

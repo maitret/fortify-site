@@ -22,19 +22,17 @@ const HomeSquareItemContent = ({ logo, icon, title, text }) => (
     {icon &&
       cloneElement(icon, {
         style: {
-          marginBottom: "12px",
+          marginBottom: "1rem",
           color: "white",
         },
       })}
     {title && (
       <span
         css={{
+          lineHeight: "2rem",
           fontSize: "2rem",
           fontWeight: "700",
-          marginBottom: "5px",
-          [media.size("xsmall")]: {
-            lineHeight: "2.1rem!important",
-          },
+          marginBottom: "0.5rem",
         }}
       >
         {title}
@@ -43,7 +41,7 @@ const HomeSquareItemContent = ({ logo, icon, title, text }) => (
     {text && (
       <span
         css={{
-          lineHeight: "1.20",
+          lineHeight: "1.2rem",
           color: "#9ea1b8",
           fontSize: "1.125rem",
           maxWidth: "300px",

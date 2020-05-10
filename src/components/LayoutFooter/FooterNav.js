@@ -1,7 +1,7 @@
 import React from "react"
 import { media } from "../../theme"
 
-const FooterNav = ({ children, title, layoutHasSidebar = false }) => (
+const FooterNav = ({ children }) => (
   <div
     css={{
       display: "flex",

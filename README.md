@@ -1,28 +1,17 @@
-# GatsbyJS - Static site boilerplate
+# Portzilla
 
-Based on Reactjs.org source code.
+This project contains the source code for the website at [portzilla.networkchimp.com](https://portzilla.networkchimp.com)
 
-Featuring:
+## Product Issues
 
-- GatsbyJS engine
-- AntD for React.js components
-- Emotion for CSS-in-JS
-- mdx for static content
+If you're a [Portzilla](https://www.cloudflare.com/apps/portzilla) user and have any feedback or notice a bug with the app, create an issue here and we'll get right on it.
+
+## Pull Requests
+
+See a typo in the site or in the docs? Submit a PR or open an issue here!
 
 ## Development
 
 ```
-yarn
-yarn dev
-```
-
-or
-
-```
-npm i
 npm run dev
 ```
-
-## SEO Advice
-
-https://gregberge.com/blog/gatsby-seo
