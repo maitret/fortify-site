@@ -32,7 +32,7 @@ more:
       to: https://networkchimp.com/docs/portzilla.html#faq
     - title: Contribute
       external: true
-      to: /contribute
+      to: https://github.com/Network-Chimp/portzilla-site
     - title: Learn
       external: true
       to: https://networkchimp.com/tutorials/portzilla-api.html

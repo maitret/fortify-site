@@ -119,7 +119,7 @@ const HomeResourcesSection = () => (
             >
               <HomeSquareItem
                 backgroundColor={colors.greyBlue}
-                link="https://www.google.com"
+                link="https://github.com/Network-Chimp/portzilla-site"
                 logo={Github}
                 header="Contribute"
                 text={`Help us improve ${meta.app.title} by submitting bugs and feature requests on GitHub.`}
