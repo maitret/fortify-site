@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react"
 import PropTypes from "prop-types"
 import { useForm } from "react-hook-form"
 import emailValidator from "email-validator"
+import { parseDomain } from "parse-domain"
 import Paddle from "../Paddle"
 import plans from "../../plans"
 import { meta } from "../../theme"
@@ -80,7 +81,10 @@ const PricingForm = ({ onCheckoutSuccess, onCancel }) => {
                     atLeastOneDomain: name =>
                       !!name || !!registeredDomains.length,
                     validDomain: name =>
-                      !name || name.split(".").filter(Boolean).length === 2,
+                      !name ||
+                      (name.split("/").length === 1 &&
+                        parseDomain(name).type === "LISTED" &&
+                        parseDomain(name).subDomains.length === 0),
                     notDuplicate: name => !registeredDomains.includes(name),
                   },
                 })}

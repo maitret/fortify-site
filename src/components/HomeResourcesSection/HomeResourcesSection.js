@@ -30,7 +30,7 @@ const HomeResourcesSection = () => (
     >
       <HomeSectionHeader
         title="# RESOURCES"
-        text={`Browse our resources to get started with ${meta.app.title}.`}
+        text={`Browse our resources for documentation, tutorials and more about ${meta.app.title}.`}
       />
 
       <Flex
@@ -76,6 +76,7 @@ const HomeResourcesSection = () => (
               backgroundColor={colors.greyBlue}
               logo={Question}
               header="FAQ"
+              link="https://networkchimp.com/docs/portzilla.html#faq"
               text="Have a question? We may already have an answer."
             />
           </Flex>

@@ -5,20 +5,6 @@ import HomeSectionHeader from "../HomeSectionHeader"
 import PortzillaConfig from "../../../static/portzilla-config.png"
 import { media, colors, meta } from "../../theme"
 
-const featuresText = (
-  <>
-    <div>
-      {meta.app.title} is a network-level reverse proxy for sending incoming
-      traffic to other services on your domain
-    </div>
-    <div css={{ marginTop: "1rem" }}>
-      <pre css={{ backgroundColor: "transparent", letterSpacing: "0.01rem" }}>
-        torrent.nwc.com ⟶ 172.132.921:8787
-      </pre>
-    </div>
-  </>
-)
-
 const HomeFeaturesSection = () => {
   return (
     <Flex
@@ -39,7 +25,10 @@ const HomeFeaturesSection = () => {
           margin: "0 auto",
         }}
       >
-        <HomeSectionHeader title="# FEATURES" text={featuresText} />
+        <HomeSectionHeader
+          title="# FEATURES"
+          text="Seamlessly move HTTP traffic from one place to another in a feature-rich, easy to use interface"
+        />
 
         <Flex
           className="features__features"

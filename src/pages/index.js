@@ -6,7 +6,6 @@ import HomeFeaturesSection from "../components/HomeFeaturesSection"
 import HomePricingSection from "../components/HomePricingSection"
 import HomeResourcesSection from "../components/HomeResourcesSection"
 import HomeSectionLayout from "../components/HomeSectionLayout"
-import HomeTwitterSection from "../components/HomeTwitterSection"
 import configs from "../../site-config"
 
 import "@fortawesome/fontawesome-free/css/all.min.css"

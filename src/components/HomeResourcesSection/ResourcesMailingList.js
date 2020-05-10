@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react"
 import { useForm } from "react-hook-form"
 import HomeSquareItem from "../HomeSquareItem"
-import { meta, colors } from "../../theme"
 import { Subscribe } from "../Paddle"
 import "./ResourcesSection.scss"
 
@@ -12,6 +11,10 @@ const ResourcesMailingList = () => {
   const inputEl = useRef(register({ required: true }))
   const submitEl = useRef(null)
   const iconEl = useRef(null)
+
+  const onClick = () => {
+    inputEl.current.focus()
+  }
 
   const onMouseout = () => {
     iconEl.current.classList.remove("is-hovered")
@@ -43,21 +46,21 @@ const ResourcesMailingList = () => {
       text="Get the latest product updates by joining our mailing list"
       onMouseEnter={onMouseover}
       onMouseLeave={onMouseout}
+      onClick={onClick}
     >
       <div className="resources-mailing-list">
         <form onSubmit={handleSubmit(handleContactUs)}>
           <div css={{ display: "flex" }} className="field has-addons">
             <div className="control has-icons-left">
               <input
-                type="text"
                 name="email"
                 type="email"
                 className="input is-large"
                 placeholder="Email address"
                 ref={inputEl}
               />
-              <span class="icon is-medium is-left">
-                <i ref={iconEl} class="fas fa-envelope fa-lg"></i>
+              <span className="icon is-medium is-left">
+                <i ref={iconEl} className="fas fa-envelope fa-lg"></i>
               </span>
             </div>
             <div className="control">

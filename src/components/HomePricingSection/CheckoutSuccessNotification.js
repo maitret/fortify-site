@@ -7,8 +7,8 @@ const CheckoutSuccessNotification = props => {
 
   return (
     <Notification title="🚀 Plan activated" {...props}>
-      Welcome to {meta.app.title}. Look for a confirmation email arriving in
-      your inbox (or spam folder) soon.{" "}
+      Welcome to {meta.app.title}. Look for a confirmation email arriving soon
+      in your inbox (or spam folder).{" "}
       <span
         onClick={showDrift}
         css={{ cursor: "pointer", textDecoration: "underline" }}

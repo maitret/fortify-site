@@ -64,8 +64,9 @@ const HomePricingTableItem = ({
         </div>
       </div>
       <div className="pricing__table__items">
-        {contentItems.map(item => (
+        {contentItems.map((item, i) => (
           <span
+            key={i}
             css={{
               display: "block",
               background: "#f2f4f8",

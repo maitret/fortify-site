@@ -153,6 +153,8 @@ const HomePricingSection = () => {
               width: "39%",
               marginTop: "-9px",
               boxShadow: "0 10px 60px 0 rgba(158,161,184,.4)",
+              borderTopRightRadius: "4px",
+              borderBottomRightRadius: "4px",
               [media.size("xsmall")]: {
                 width: "50%!important",
                 margin: "0 5px",

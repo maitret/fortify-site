@@ -193,8 +193,8 @@ const Header = ({ location }) => {
             }}
             className="button is-primary is-outlined"
           >
-            <span class="icon is-small">
-              <i class="far fa-comment-alt"></i>
+            <span className="icon is-small">
+              <i className="far fa-comment-alt"></i>
             </span>
             <span>Have a question?</span>
           </button>

@@ -11,7 +11,8 @@ const meta = {
 }
 
 const colors = {
-  brand: "#72ba81", // electric blue
+  brand: "#72ba81",
+  codeVariable: "#3f9cd6",
   cloudflare: "#f4801f",
   cloudflareLight: "hsl(28,90%,25%)",
   lighter: "#373940", // light blue

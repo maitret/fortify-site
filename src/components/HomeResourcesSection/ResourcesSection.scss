@@ -8,6 +8,9 @@
     &::placeholder {
       color: hsl(233, 15%, 67%);
     }
+    &:focus {
+      border-color: hsl(233, 15%, 67%);
+    }
   }
 
   .icon {
