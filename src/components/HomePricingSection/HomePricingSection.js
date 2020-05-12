@@ -124,7 +124,7 @@ const HomePricingSection = () => {
             }}
           />
           <HomePricingTableItem
-            title="unlimited"
+            title="Unlimited"
             contentItems={[
               "∞",
               <img alt="checkmark" css={{ width: "14px" }} src={Check} />,
