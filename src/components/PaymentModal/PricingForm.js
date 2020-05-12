@@ -1,8 +1,8 @@
+import psl from "psl"
 import React, { useState, useMemo } from "react"
 import PropTypes from "prop-types"
 import { useForm } from "react-hook-form"
 import emailValidator from "email-validator"
-import { parseDomain } from "parse-domain"
 import Paddle from "../Paddle"
 import plans from "../../plans"
 import { meta } from "../../theme"
@@ -80,11 +80,17 @@ const PricingForm = ({ onCheckoutSuccess, onCancel }) => {
                   validate: {
                     atLeastOneDomain: name =>
                       !!name || !!registeredDomains.length,
-                    validDomain: name =>
-                      !name ||
-                      (name.split("/").length === 1 &&
-                        parseDomain(name).type === "LISTED" &&
-                        parseDomain(name).subDomains.length === 0),
+                    validDomain: name => {
+                      if (!name) return true
+
+                      const parsedDomain = psl.parse(name)
+
+                      return (
+                        name.split("/").length === 1 &&
+                        parsedDomain.domain &&
+                        !parsedDomain.subdomain
+                      )
+                    },
                     notDuplicate: name => !registeredDomains.includes(name),
                   },
                 })}
