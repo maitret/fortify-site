@@ -1,0 +1,39 @@
+.extend-free-trial,
+.extend-free-trial {
+  label {
+    color: hsl(233, 15%, 67%);
+  }
+
+  input {
+    outline: none;
+    transition: 0.8s all;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid hsl(233, 15%, 67%);
+    color: #f2f4f8;
+    &::placeholder {
+      color: hsl(233, 15%, 67%);
+    }
+    &:focus {
+      border-color: hsl(233, 15%, 67%);
+    }
+  }
+  .field {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .icon {
+    color: hsl(233, 15%, 67%);
+    &:hover {
+      color: #f2f4f8 !important;
+    }
+  }
+
+  .is-hovered {
+    transition: 0.8s all;
+    border-color: #f2f4f8 !important;
+    color: #f2f4f8 !important;
+    &::placeholder {
+      color: #f2f4f8;
+    }
+  }
+}

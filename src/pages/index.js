@@ -14,8 +14,8 @@ const IndexPage = () => (
   <PageLayout>
     <SEO
       page="index"
+      title={configs.app_title}
       keywords={configs.app_keywords}
-      title={configs.app_subtitle_short}
     />
     <div
       css={{
