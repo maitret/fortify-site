@@ -8,3 +8,10 @@
 ::selection {
   background: $primary;
 }
+
+a {
+  color: $primary;
+  &:hover {
+    color: lighten($primary, 10%);
+  }
+}

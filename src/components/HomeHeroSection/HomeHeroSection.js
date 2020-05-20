@@ -98,13 +98,16 @@ const HomeHeroSection = () => (
         halign="center"
         css={{ marginTop: "15px" }}
       >
-        <Flex css={{ width: 400 }} direction="column" halign="center">
-          <div
+        <Flex direction="column" halign="center">
+          <a
             css={{ marginTop: "2rem" }}
             data-tooltip={`${meta.app.title} can be installed on any Cloudflare-enabled website in a few minutes`}
+            href={`https://cloudflare.com/apps/${meta.app.slug}`}
+            target="_blank"
+            rel="noopener"
           >
             <img alt="cloudflare logo" src={CloudflareLogo} />
-          </div>
+          </a>
           <a
             css={{
               color: colors.cloudflare,

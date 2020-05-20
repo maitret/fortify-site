@@ -101,6 +101,18 @@ const PricingForm = ({ onCheckoutSuccess, onCancel }) => {
               </span>
             </div>
 
+            {errors.domainNameSelector ? (
+              errors.domainNameSelector.type === "validDomain" ? (
+                <p className="help is-primary">
+                  Your domain should be formatted like <code>yoursite.com</code>
+                </p>
+              ) : errors.domainNameSelector.type === "notDuplicate" ? (
+                <p className="help is-primary">
+                  That domain is already part of your plan.
+                </p>
+              ) : null
+            ) : null}
+
             <div className="control">
               <button
                 type="button"
@@ -111,17 +123,7 @@ const PricingForm = ({ onCheckoutSuccess, onCancel }) => {
               </button>
             </div>
           </div>
-          {errors.domainNameSelector ? (
-            errors.domainNameSelector.type === "validDomain" ? (
-              <p className="help is-primary">
-                Your domain should be formatted like <code>yoursite.com</code>
-              </p>
-            ) : errors.domainNameSelector.type === "notDuplicate" ? (
-              <p className="help is-primary">
-                That domain is already part of your plan.
-              </p>
-            ) : null
-          ) : null}
+
           <div className="is-flex" style={{ minHeight: 42, flexWrap: "wrap" }}>
             {registeredDomains.map(domain => (
               <div key={domain} className="domain-tag">

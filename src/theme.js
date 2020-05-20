@@ -30,6 +30,8 @@ const colors = {
   black: "#000000",
   greyBlue: "#23263c",
   lightHighlight: "hsl(220, 30%, 96%)",
+  darkThemeWhite: "#f2f4f8",
+  darkThemeGrey: "hsl(233, 15%, 67%)",
 }
 
 const SIZES = {

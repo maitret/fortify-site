@@ -27,6 +27,8 @@ legal:
 more:
   title: More
   items:
+    - title: Extend free trial
+      to: /extend-free-trial
     - title: FAQ
       external: true
       to: https://networkchimp.com/docs/portzilla.html#faq

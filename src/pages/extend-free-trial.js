@@ -1,32 +1,34 @@
 import React from "react"
-import SEO from "../components/Seo"
+import { colors } from "../theme"
 import { PageLayout } from "../components/Layout"
 import ExtendFreeTrialForm from "../components/ExtendFreeTrialForm"
-import configs from "../../site-config"
 
 import "@fortawesome/fontawesome-free/css/all.min.css"
 
-const IndexPage = () => (
+const ExtendFreeTrialPage = () => (
   <PageLayout>
-    <SEO
-      page="index"
-      keywords={configs.app_keywords}
-      title={configs.app_subtitle_short}
-    />
     <div
       css={{
-        paddingTop: "60px",
         background: "#000",
+        padding: "5rem 1rem",
         maxWidth: 600,
-        paddingLeft: "1rem",
-        paddingRight: "1rem",
       }}
       className="container"
     >
-      <h1 className="is-size-2">Extend your free trial</h1>
+      <div css={{ marginBottom: "2rem" }}>
+        <h1 className="is-size-2" css={{ color: colors.darkThemeWhite }}>
+          Extend your free trial
+        </h1>
+        <h3 className="is-size-5" css={{ color: colors.darkThemeGrey }}>
+          Have a Twitter account and want to add another 14 days to your
+          Portzilla free trial? Tweet something awesome about Portzilla and drop
+          us a link to the tweet below.
+        </h3>
+      </div>
+
       <ExtendFreeTrialForm />
     </div>
   </PageLayout>
 )
 
-export default IndexPage
+export default ExtendFreeTrialPage
