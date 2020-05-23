@@ -1,17 +1,16 @@
 import psl from "psl"
-import React from "react"
+import React, { useState } from "react"
 import { Magic } from "magic-sdk"
 import { useForm } from "react-hook-form"
-import "./ExtendFreeTrialForm.scss"
 import extendTrial from "./extendTrial"
-import { globalWindow } from "../../utils/window"
 
-let magicLinkKey = globalWindow.location.hostname.includes("localhost")
-  ? "pk_test_65604B937C668968"
-  : "pk_live_00EED89B6FC22076"
+import "./ExtendFreeTrialForm.scss"
+
+const magicLinkKey = "pk_live_00EED89B6FC22076"
 
 export default () => {
   const { register, handleSubmit, formState, errors } = useForm()
+  const [outcome, setOutcome] = useState(null)
 
   const onSubmit = async data => {
     const magic = new Magic(magicLinkKey)
@@ -19,10 +18,42 @@ export default () => {
       email: data.accountEmail,
     })
 
-    const response = await extendTrial(data, token)
-    console.log(`response`, response)
+    let message = ""
 
-    debugger
+    setOutcome(message)
+
+    try {
+      const response = await extendTrial(data, token)
+
+      let result
+      if (response.headers.get("content-type") === "application/json") {
+        result = await response.json()
+      }
+
+      message =
+        "Sit tight! We received your free trial extension request and usually respond within 3-5 hours."
+
+      if (response.status !== 200) {
+        switch (result.code) {
+          case "ALREADY_EXTENDED":
+            message = "You can only extend your trial one time per domain."
+            break
+          case "NO_FREE_TRIAL":
+            message = `Your free trial isn't activated.`
+            break
+          case "BAD_TWEET":
+            message = `Something looks a little off.  It should be an awesome tweet that mentions Portzilla.`
+            break
+          default:
+            message = `We didn't recognize that.`
+            break
+        }
+      }
+    } catch (error) {
+      message = `Something broke.  Contact us at support@networkchimp.com and we'll get right on it.`
+    }
+
+    setOutcome(message)
   }
 
   return (
@@ -154,7 +185,7 @@ export default () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="/legal/terms-of-service"
+                  href="https://networkchimp.com/terms-of-service.html"
                 >
                   Terms of Service.
                 </a>{" "}
@@ -174,9 +205,15 @@ export default () => {
           className="button is-primary"
           disabled={Object.keys(errors).length || !formState.dirty}
         >
-          Extend it
+          Extend my free trial
         </button>
       </div>
+
+      {outcome && (
+        <div className="notification is-info" css={{ marginTop: "2rem" }}>
+          {outcome}
+        </div>
+      )}
     </form>
   )
 }

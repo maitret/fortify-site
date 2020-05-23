@@ -13,6 +13,8 @@ module.exports = {
   },
   app_keywords: [meta.app.title],
   four_oh_four_keywords: ["page not found"],
+  extend_free_trial_title: "Extend your free trial",
+  extend_free_trial_keywords: ["extend", "free trial"],
   // Personal Info
   twitter_username: "NetworkChimp",
   docs: {

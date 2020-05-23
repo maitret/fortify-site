@@ -1,11 +1,14 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import { globalWindow } from "../../utils/window"
 import { colors, media } from "../../theme"
 
-const HeaderLink = ({ isActive, title, to, isAnchor }) =>
-  isAnchor && globalWindow.location.pathname === "/" ? (
+const HeaderLink = ({ isActive, title, to, isAnchor }) => {
+  const [isHome, setIsHome] = useState(false)
+  useEffect(() => setIsHome(globalWindow.location.pathname === "/"), [])
+
+  return isAnchor && isHome ? (
     <AnchorLink css={[style, isActive && activeStyle]} href={to}>
       {title}
       {isActive && <span css={activeAfterStyle} />}
@@ -16,6 +19,7 @@ const HeaderLink = ({ isActive, title, to, isAnchor }) =>
       {isActive && <span css={activeAfterStyle} />}
     </Link>
   )
+}
 
 const style = {
   display: "flex",

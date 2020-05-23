@@ -198,7 +198,7 @@ const PricingForm = ({ onCheckoutSuccess, onCancel }) => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="/legal/terms-of-service"
+                  href="https://networkchimp.com/terms-of-service.html"
                 >
                   Terms of Service.
                 </a>{" "}
