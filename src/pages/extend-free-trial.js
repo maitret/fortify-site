@@ -40,7 +40,7 @@ const ExtendFreeTrialPage = () => (
         }}
       >
         <Step number={1} />
-        <p css={{ color: colors.darkThemeGrey }}>
+        <p css={{ color: colors.darkThemeWhite }}>
           We love feedback and use it to make Portzilla better. A minutes or two
           of your time for a{" "}
           <a

@@ -31,7 +31,7 @@ export default () => {
       }
 
       message =
-        "Sit tight! We received your free trial extension request and usually respond within 3-5 hours."
+        "Sit tight! We received your free trial extension request and usually respond within 1-3 hours."
 
       if (response.status !== 200) {
         switch (result.code) {
