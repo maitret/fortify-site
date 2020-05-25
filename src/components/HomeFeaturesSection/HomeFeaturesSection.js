@@ -2,8 +2,8 @@ import React from "react"
 import Flex from "../Flex"
 import HomeSquareItem from "../HomeSquareItem"
 import HomeSectionHeader from "../HomeSectionHeader"
-import PortzillaConfig from "../../../static/portzilla-config.png"
-import { media, colors, meta } from "../../theme"
+import EdgyConfig from "../../../static/portzilla-config.png"
+import { media, colors } from "../../theme"
 
 const HomeFeaturesSection = () => {
   return (
@@ -89,7 +89,7 @@ const HomeFeaturesSection = () => {
                 >
                   <HomeSquareItem
                     header="Intuitive UI"
-                    text="Set up Portzilla in a few minutes with our easy to use user interface"
+                    text="Set up Edgy in a few minutes with our easy to use user interface"
                     backgroundColor={colors.greyBlue}
                   >
                     <img
@@ -99,7 +99,7 @@ const HomeFeaturesSection = () => {
                         border: "1rem solid black",
                         borderRadius: "1rem",
                       }}
-                      src={PortzillaConfig}
+                      src={EdgyConfig}
                       alt="Screenshot small"
                     />
                   </HomeSquareItem>
@@ -151,7 +151,7 @@ const HomeFeaturesSection = () => {
                 backgroundColor={colors.greyBlue}
                 icon={<i className="fab fa-3x fa-react"></i>}
                 header="Single Page App Mode"
-                text="Using a modern Javascript frontend like React or VueJS?  Proxy it with Portzilla in a few clicks"
+                text="Using a modern Javascript frontend like React or VueJS?  Proxy it with Edgy in a few clicks"
               />
             </div>
           </div>
@@ -178,7 +178,7 @@ const HomeFeaturesSection = () => {
                   backgroundColor="transparent"
                   icon={<i className="fas fa-3x fa-broadcast-tower"></i>}
                   header="Proxy anywhere"
-                  text="Want to proxy a port unsupported by Cloudflare? Use Portzilla to proxy any port on your domain."
+                  text="Want to proxy a port unsupported by Cloudflare? Use Edgy to proxy any port on your domain."
                 />
               </div>
               <div css={{ flex: 1 }}>
@@ -186,7 +186,7 @@ const HomeFeaturesSection = () => {
                   backgroundColor="transparent"
                   icon={<i className="fas fa-3x fa-globe"></i>}
                   header="Proxy any way"
-                  text="Portzilla proxies any subdomain or subpath on your domain"
+                  text="Edgy proxies any subdomain or subpath on your domain"
                 />
               </div>
             </div>

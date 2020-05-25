@@ -2,8 +2,8 @@ const hex2rgba = require("hex2rgba")
 
 const meta = {
   app: {
-    slug: "portzilla",
-    title: "Portzilla",
+    slug: "edgy",
+    title: "Edgy",
     description:
       "A powerful reverse proxy to send incoming traffic to multiple services on your domain",
     fontFamily: `'Solway', -apple-system, BlinkMacSystemFont, "Segoe UI"`,

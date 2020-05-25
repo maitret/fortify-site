@@ -24,7 +24,7 @@ const HomeHeroSection = () => (
       <LargeText
         elementName="h1"
         customStyles={{ maxWidth: 720, textAlign: "center", padding: "0 1rem" }}
-        text={`${meta.app.title} is a network-level reverse proxy for sending incoming traffic to other services on your domain`}
+        text={`Offload your Maintenance Mode infrastucture and focus on more important things.`}
       />
       <div
         css={{
