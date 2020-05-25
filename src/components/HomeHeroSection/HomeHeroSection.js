@@ -19,7 +19,7 @@ const HomeHeroSection = () => (
       className="hero__section__container"
       direction="column"
       halign="center"
-      css={{ paddingTop: "50px", width: "100%" }}
+      css={{ paddingTop: "2rem", width: "100%" }}
     >
       <LargeText
         elementName="h1"

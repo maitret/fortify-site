@@ -7,6 +7,7 @@ import HomePricingSection from "../components/HomePricingSection"
 import HomeResourcesSection from "../components/HomeResourcesSection"
 import HomeSectionLayout from "../components/HomeSectionLayout"
 import configs from "../../site-config"
+import { colors } from "../theme"
 
 import "@fortawesome/fontawesome-free/css/all.min.css"
 
@@ -23,6 +24,29 @@ const IndexPage = () => (
         background: "#000",
       }}
     >
+      <div
+        css={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          paddingTop: "2rem",
+        }}
+      >
+        <div
+          className="notification is-warning"
+          css={{
+            padding: "1rem",
+            cursor: "default",
+            fontVariant: "small-caps",
+            backgroundColor: `#faad3f !important`,
+            color: `${colors.dark} !important`,
+          }}
+        >
+          <i css={{ marginRight: "0.5rem" }} className="fas fa-award"></i>
+          Cloudflare Apps (2019): Most Downloaded Networking solution
+        </div>
+      </div>
+
       <HomeHeroSection />
 
       <HomeSectionLayout>

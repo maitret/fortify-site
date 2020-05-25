@@ -27,7 +27,7 @@ const ExtendFreeTrialPage = () => (
         <h1 className="is-size-2" css={{ color: colors.darkThemeWhite }}>
           Extend your free trial
         </h1>
-        <h3 className="is-size-5" css={{ color: colors.darkThemeGrey }}>
+        <h3 className="is-size-5" css={{ color: colors.darkThemeWhite }}>
           Have a Twitter account and want to extend your Portzilla free trial
           another 14 days? Follow these two steps and we'll make it happen.
         </h3>
@@ -56,7 +56,7 @@ const ExtendFreeTrialPage = () => (
 
       <div css={{ display: "flex", alignItems: "center" }}>
         <Step number={2} />
-        <p css={{ color: colors.darkThemeGrey }}>
+        <p css={{ color: colors.darkThemeWhite }}>
           Tweet something awesome about Portzilla and drop us a link to it
           below. We'll normally reply within 1-3 hours!
         </p>

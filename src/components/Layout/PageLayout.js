@@ -10,7 +10,7 @@ const PageLayout = ({ children }) => (
   <div
     css={{
       minHeight: "100vh",
-      backgroundColor: colors.darkies,
+      backgroundColor: colors.black,
     }}
   >
     <LayoutHeader />
