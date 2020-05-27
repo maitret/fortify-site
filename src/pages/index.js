@@ -15,7 +15,9 @@ const IndexPage = () => (
   <PageLayout>
     <SEO
       page="index"
-      title={configs.app_title}
+      title={
+        "Offload your Maintenance Mode infrastucture to the edge and focus on more important things."
+      }
       keywords={configs.app_keywords}
     />
     <div
@@ -33,17 +35,18 @@ const IndexPage = () => (
         }}
       >
         <div
-          className="notification is-warning"
           css={{
             padding: "1rem",
             cursor: "default",
             fontVariant: "small-caps",
-            backgroundColor: `#faad3f !important`,
-            color: `${colors.dark} !important`,
+            border: `1px solid`,
+            borderColor: `#faad3f !important`,
+            color: `#faad3f !important`,
+            borderRadius: "6px",
           }}
         >
           <i css={{ marginRight: "0.5rem" }} className="fas fa-award"></i>
-          Cloudflare Apps (2019): Most Downloaded Networking solution
+          Cloudflare Apps (2019): Most Downloaded DevOps solution
         </div>
       </div>
 

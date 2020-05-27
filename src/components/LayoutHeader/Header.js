@@ -46,7 +46,6 @@ const Header = ({ location }) => {
             alignItems: "center",
             color: colors.brand,
             fontFamily: meta.app.fontFamily,
-            textTransform: "uppercase",
             padding: "0.5rem 0.75rem",
             ":focus": {
               outline: 0,
@@ -191,7 +190,7 @@ const Header = ({ location }) => {
                 marginRight: 30,
               },
             }}
-            className="button is-primary is-outlined"
+            className="button is-primary"
           >
             <span className="icon is-small">
               <i className="far fa-comment-alt"></i>

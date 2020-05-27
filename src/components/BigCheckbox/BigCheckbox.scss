@@ -1,0 +1,166 @@
+.big-checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .big {
+    font-size: 2rem;
+  }
+
+  .bottom-text {
+    min-height: 3.7rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    max-width: 420px;
+    text-align: center;
+  }
+
+  /* CSS below will force radio/checkbox size be same as font size */
+  label {
+    position: relative;
+    // line-height: 1.4;
+  }
+
+  /*checkbox/*/
+  input[type="checkbox"] {
+    // width: 1em;
+    font-size: inherit;
+    margin: 0;
+    transform: translateX(-9999px);
+  }
+  input[type="checkbox"] + label:before {
+    box-sizing: initial;
+    position: absolute;
+    content: "";
+    left: -1.3em;
+    top: 0;
+    width: 1em;
+    height: 1em;
+    margin: 0;
+    border: none;
+    border-radius: 10%;
+    background-color: #bbbbbb;
+  }
+  input[type="checkbox"] + label:after {
+    box-sizing: initial;
+    position: absolute;
+    content: "";
+    left: -1.3em;
+    top: 0;
+    width: 1em;
+    height: 1em;
+    margin: 0;
+    border: none;
+    background-color: white;
+    border-radius: 10%;
+    transform: scale(0.8);
+  }
+  /*checked*/
+  input[type="checkbox"]:checked + label:before {
+    position: absolute;
+    content: "";
+    left: -1.3em;
+    top: 0;
+    width: 1em;
+    height: 1em;
+    margin: 0;
+    border: none;
+    background-color: #6e77e5;
+  }
+  input[type="checkbox"]:checked + label:after {
+    position: absolute;
+    content: "\2713";
+    left: -1.3em;
+    top: 0;
+    width: 1em;
+    height: 1em;
+    margin: 0;
+    border: none;
+    background-color: #6e77e5;
+    border-radius: 10%;
+    color: white;
+    text-align: center;
+    line-height: 1;
+  }
+  /*focused*/
+  input[type="checkbox"]:focus + label:before {
+    border: 0.1em solid #8f96eb;
+    margin-top: -0.1em;
+    margin-left: -0.1em;
+    box-shadow: 0 0 0.2em #6e77e5;
+  }
+
+  @media only screen and (max-width: 600px) {
+    input[type="checkbox"] {
+      width: 1em;
+      font-size: inherit;
+      margin: 0;
+      transform: translateX(-9999px);
+    }
+    input[type="checkbox"] + label:before {
+      box-sizing: initial;
+      position: absolute;
+      content: "";
+      // left: -1.3em;
+      top: 5px;
+      width: 0.75em;
+      height: 0.75em;
+      margin: 0;
+      border: none;
+      border-radius: 10%;
+      background-color: #bbbbbb;
+    }
+    input[type="checkbox"] + label:after {
+      box-sizing: initial;
+      position: absolute;
+      content: "";
+      // left: -1.3em;
+      top: 5px;
+      width: 0.75em;
+      height: 0.75em;
+      margin: 0;
+      border: none;
+      background-color: white;
+      border-radius: 10%;
+      transform: scale(0.8);
+    }
+    /*checked*/
+    input[type="checkbox"]:checked + label:before {
+      position: absolute;
+      content: "";
+      // left: -1.3em;
+      top: 5px;
+      width: 0.75em;
+      height: 0.75em;
+      margin: 0;
+      border: none;
+      background-color: #6e77e5;
+    }
+    input[type="checkbox"]:checked + label:after {
+      position: absolute;
+      content: "\2713";
+      // left: -1.3em;
+      top: 5px;
+      width: 0.75em;
+      height: 0.75em;
+      margin: 0;
+      border: none;
+      background-color: #6e77e5;
+      border-radius: 10%;
+      color: white;
+      text-align: center;
+      line-height: 0.7;
+    }
+
+    .big {
+      font-size: 1.5rem;
+    }
+
+    .bottom-text {
+      min-height: 1rem;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      max-width: 320px;
+    }
+  }
+}

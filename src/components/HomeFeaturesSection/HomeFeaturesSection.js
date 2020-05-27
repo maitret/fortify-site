@@ -27,7 +27,7 @@ const HomeFeaturesSection = () => {
       >
         <HomeSectionHeader
           title="# FEATURES"
-          text="Seamlessly move HTTP traffic from one place to another in a feature-rich, easy to use interface"
+          text="Enable Maintenance Mode on any route and ensure your website never goes down"
         />
 
         <Flex
@@ -78,7 +78,7 @@ const HomeFeaturesSection = () => {
                     backgroundColor={colors.greyBlue}
                     icon={<i className="fas fa-3x fa-cogs"></i>}
                     header="Unlimited Configurations"
-                    text="Want to proxy multiple ports on the same domain? Configure as many as you need."
+                    text="Want to enable maintenance on multiple routes? Set up as many as you need."
                   />
                 </div>
 
@@ -119,9 +119,9 @@ const HomeFeaturesSection = () => {
                 >
                   <HomeSquareItem
                     backgroundColor={colors.greyBlue}
-                    icon={<i className="fas fa-3x fa-pencil-alt"></i>}
-                    header="Custom request headers"
-                    text="Append any number of custom request headers to proxied requests"
+                    icon={<i className="fas fa-3x fa-wrench"></i>}
+                    header="Maintenance Mode"
+                    text="Enable maintenance mode on your entire website or only on select routes automatically after a chosen date or manually when you need it."
                   />
                 </div>
 
@@ -133,9 +133,9 @@ const HomeFeaturesSection = () => {
                 >
                   <HomeSquareItem
                     backgroundColor={colors.greyBlue}
-                    icon={<i className="fas fa-3x fa-bug"></i>}
-                    header="Custom error pages"
-                    text="Set up custom error pages for services that aren't responding or use our default error page"
+                    icon={<i className="fas fa-3x fa-users-cog"></i>}
+                    header="Empower your team"
+                    text="Developers need access to a website to fix it.  Bypass maintenance mode with password and IP address-based whitelists to get back online fast."
                   />
                 </div>
               </div>
@@ -149,9 +149,9 @@ const HomeFeaturesSection = () => {
             >
               <HomeSquareItem
                 backgroundColor={colors.greyBlue}
-                icon={<i className="fab fa-3x fa-react"></i>}
-                header="Single Page App Mode"
-                text="Using a modern Javascript frontend like React or VueJS?  Proxy it with Edgy in a few clicks"
+                icon={<i className="fas fa-3x fa-heartbeat"></i>}
+                header="Achieve 100% uptime"
+                text="Your visitors will always know you're online"
               />
             </div>
           </div>
@@ -176,17 +176,17 @@ const HomeFeaturesSection = () => {
               <div css={{ flex: 1 }}>
                 <HomeSquareItem
                   backgroundColor="transparent"
-                  icon={<i className="fas fa-3x fa-broadcast-tower"></i>}
-                  header="Proxy anywhere"
-                  text="Want to proxy a port unsupported by Cloudflare? Use Edgy to proxy any port on your domain."
+                  icon={<i className="fas fa-3x fa-arrow-up"></i>}
+                  header="Always Up Mode"
+                  text="Render a page of your choice whenever your website is experiencing unexpected downtime (500-level errors) so visitors know you're still there."
                 />
               </div>
               <div css={{ flex: 1 }}>
                 <HomeSquareItem
                   backgroundColor="transparent"
-                  icon={<i className="fas fa-3x fa-globe"></i>}
-                  header="Proxy any way"
-                  text="Edgy proxies any subdomain or subpath on your domain"
+                  icon={<i className="fab fa-3x fa-html5"></i>}
+                  header="Choose your template"
+                  text="Already have a maintenance mode page? Use it with Edgy or choose from a variety templates."
                 />
               </div>
             </div>

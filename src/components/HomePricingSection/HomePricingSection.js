@@ -107,12 +107,11 @@ const HomePricingSection = () => {
           <HomePricingTableItem
             title="Features"
             contentItems={[
-              "# of Route Configurations",
-              "Single Page App support",
-              "Proxy any subdomain",
-              "Cache proxied requests",
-              "HTTP/S support",
-              "Websocket support",
+              "Unlimited route configurations",
+              "Always up mode - never go down!",
+              "Schedulable maintenance mode",
+              "IP/Password-based bypasses",
+              "Flexible template engine",
             ]}
             footer={<span css={{ opacity: 0 }}>.</span>}
             customStyles={{
@@ -131,7 +130,6 @@ const HomePricingSection = () => {
               <img alt="checkmark" css={{ width: "14px" }} src={Check} />,
               <img alt="checkmark" css={{ width: "14px" }} src={Check} />,
               <img alt="checkmark" css={{ width: "14px" }} src={Check} />,
-              "❌",
             ]}
             footer={
               <button

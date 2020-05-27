@@ -2,6 +2,7 @@ import React from "react"
 import Flex from "../Flex"
 import VideoGallery from "../VideoGallery"
 import LargeText from "../HomeSectionHeader/LargeText"
+import BigCheckbox from "../BigCheckbox"
 import { CloudflareLogo, BackgroundLines } from "../../svg"
 import { media, colors, meta } from "../../theme"
 
@@ -32,35 +33,15 @@ const HomeHeroSection = () => (
           fontSize: "1.5rem",
           width: "100%",
           padding: "0 1rem",
+          display: "flex",
+          justifyContent: "center",
           [media.size("xsmall")]: {
             fontSize: "1rem!important",
             lineHeight: "25px!important",
           },
         }}
       >
-        <pre
-          css={{
-            padding: 0,
-            whiteSpace: "normal",
-            wordWrap: "break-word",
-            letterSpacing: "0.01rem",
-            backgroundColor: "transparent",
-            textAlign: "center",
-          }}
-        >
-          <div>
-            <span css={{ color: colors.cloudflare }}>torrent.</span>
-            <span css={{ color: colors.codeVariable }}>yoursite.com</span> ⟶
-            172.132.921
-            <span css={{ color: colors.brand }}>:8787</span>
-          </div>
-          <div>
-            <span css={{ color: colors.codeVariable }}>yoursite.com</span>
-            <span css={{ color: colors.cloudflare }}>/api</span> ⟶
-            ec2-24.amazonaws.com
-            <span css={{ color: colors.brand }}>:4080</span>
-          </div>
-        </pre>
+        <BigCheckbox label="Enable Maintenance Mode" />
       </div>
 
       <h1
@@ -143,8 +124,8 @@ const HomeHeroSection = () => (
           playing={true}
           sourceList={[
             {
-              url: "https://www.youtube.com/watch?v=MEQ9WcB9-kk",
-              description: "Crash course with Create React App",
+              url: "https://youtu.be/HQ5Wts3GoCg",
+              description: "Learn about route-based maintenance mode",
             },
           ]}
         />

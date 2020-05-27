@@ -6,12 +6,13 @@ const meta = {
     title: "Edgy",
     description:
       "A powerful reverse proxy to send incoming traffic to multiple services on your domain",
-    fontFamily: `'Solway', -apple-system, BlinkMacSystemFont, "Segoe UI"`,
+    fontFamily: `'Orbitron', -apple-system, BlinkMacSystemFont, "Segoe UI"`,
   },
 }
 
 const colors = {
-  brand: "#72ba81",
+  brand: "#6e77e5",
+  brandLight: "#8f96eb",
   codeVariable: "#3f9cd6",
   cloudflare: "#f4801f",
   cloudflareLight: "hsl(28,90%,25%)",
@@ -19,7 +20,6 @@ const colors = {
   dark: "#282c34", // dark blue
   darker: "#20232a", // really dark blue,
   darkies: "#0a0c19", // swear this is darkest :D
-  brandLight: "#bbeffd",
   text: "#1a1a1a", // very dark grey / black substitute
   subtle: "#6d6d6d", // light grey for text
   subtleOnDark: "#999",
