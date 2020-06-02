@@ -5,7 +5,7 @@ const meta = {
     slug: "edgy",
     title: "Edgy",
     description:
-      "A powerful reverse proxy to send incoming traffic to multiple services on your domain",
+      "Offload your of your Maintenance Mode infrastucture so you can focus on more important things.",
     fontFamily: `'Orbitron', -apple-system, BlinkMacSystemFont, "Segoe UI"`,
   },
 }

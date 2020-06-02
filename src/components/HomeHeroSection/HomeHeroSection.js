@@ -24,8 +24,8 @@ const HomeHeroSection = () => (
     >
       <LargeText
         elementName="h1"
+        text={meta.app.description}
         customStyles={{ maxWidth: 720, textAlign: "center", padding: "0 1rem" }}
-        text={`Offload your Maintenance Mode infrastucture and focus on more important things.`}
       />
       <div
         css={{

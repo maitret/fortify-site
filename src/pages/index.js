@@ -7,7 +7,7 @@ import HomePricingSection from "../components/HomePricingSection"
 import HomeResourcesSection from "../components/HomeResourcesSection"
 import HomeSectionLayout from "../components/HomeSectionLayout"
 import configs from "../../site-config"
-import { colors } from "../theme"
+import { meta } from "../theme"
 
 import "@fortawesome/fontawesome-free/css/all.min.css"
 
@@ -15,9 +15,7 @@ const IndexPage = () => (
   <PageLayout>
     <SEO
       page="index"
-      title={
-        "Offload your Maintenance Mode infrastucture to the edge and focus on more important things."
-      }
+      title={meta.app.description}
       keywords={configs.app_keywords}
     />
     <div
