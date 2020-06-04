@@ -6,7 +6,7 @@ export default async (params, token) =>
     }),
     method: "POST",
     body: JSON.stringify({
-      appName: "edgy",
+      appName: "portzilla",
       socialType: "twitter",
       ...params,
     }),

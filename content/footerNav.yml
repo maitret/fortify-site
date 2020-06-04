@@ -3,13 +3,13 @@ docs:
   items:
     - title: How to install
       external: true
-      to: https://networkchimp.com/docs/edgy.html#how-to-install
+      to: https://networkchimp.com/docs/portzilla.html#how-to-install
     - title: Getting started
       external: true
-      to: https://networkchimp.com/docs/edgy.html#getting-started
+      to: https://networkchimp.com/docs/portzilla.html#getting-started
     - title: Configuration
       external: true
-      to: https://networkchimp.com/docs/edgy.html#configuration
+      to: https://networkchimp.com/docs/portzilla.html#configuration
 
 legal:
   title: Legal
@@ -31,10 +31,10 @@ more:
       to: /extend-free-trial
     - title: FAQ
       external: true
-      to: https://networkchimp.com/docs/edgy.html#faq
+      to: https://networkchimp.com/docs/portzilla.html#faq
     - title: Contribute
       external: true
-      to: https://github.com/Network-Chimp/edgy-site
+      to: https://github.com/Network-Chimp/portzilla-site
     - title: Learn
       external: true
-      to: https://networkchimp.com/tutorials/edgy.html
+      to: https://networkchimp.com/tutorials/portzilla.html

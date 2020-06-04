@@ -61,7 +61,7 @@ const HomeResourcesSection = () => (
               backgroundColor={colors.greyBlue}
               logo={MachineLearning}
               header="Learn"
-              link="https://www.networkchimp.com/tutorials/edgy.html"
+              link="https://www.networkchimp.com/tutorials/portzilla.html"
               text={`Explore ${meta.app.title} tutorials and demos for detailed walkthroughs.`}
             />
           </Flex>
@@ -76,7 +76,7 @@ const HomeResourcesSection = () => (
               backgroundColor={colors.greyBlue}
               logo={Question}
               header="FAQ"
-              link="https://networkchimp.com/docs/edgy.html#faq"
+              link="https://networkchimp.com/docs/portzilla.html#faq"
               text="Have a question? We may already have an answer."
             />
           </Flex>
@@ -119,7 +119,7 @@ const HomeResourcesSection = () => (
             >
               <HomeSquareItem
                 backgroundColor={colors.greyBlue}
-                link="https://github.com/Network-Chimp/edgy-site"
+                link="https://github.com/Network-Chimp/portzilla-site"
                 logo={Github}
                 header="Contribute"
                 text={`Help us improve ${meta.app.title} by submitting bugs and feature requests on GitHub.`}

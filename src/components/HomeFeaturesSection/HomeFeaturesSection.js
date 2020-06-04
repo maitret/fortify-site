@@ -2,7 +2,7 @@ import React from "react"
 import Flex from "../Flex"
 import HomeSquareItem from "../HomeSquareItem"
 import HomeSectionHeader from "../HomeSectionHeader"
-import EdgyConfig from "../../../static/portzilla-config.png"
+import FortifyConfig from "../../../static/portzilla-config.png"
 import { media, colors } from "../../theme"
 
 const HomeFeaturesSection = () => {
@@ -89,7 +89,7 @@ const HomeFeaturesSection = () => {
                 >
                   <HomeSquareItem
                     header="Intuitive UI"
-                    text="Set up Edgy in a few minutes with our easy to use user interface"
+                    text="Set up Portzilla in a few minutes with our easy to use user interface"
                     backgroundColor={colors.greyBlue}
                   >
                     <img
@@ -99,7 +99,7 @@ const HomeFeaturesSection = () => {
                         border: "1rem solid black",
                         borderRadius: "1rem",
                       }}
-                      src={EdgyConfig}
+                      src={FortifyConfig}
                       alt="Screenshot small"
                     />
                   </HomeSquareItem>
@@ -186,7 +186,7 @@ const HomeFeaturesSection = () => {
                   backgroundColor="transparent"
                   icon={<i className="fab fa-3x fa-html5"></i>}
                   header="Choose your template"
-                  text="Already have a maintenance mode page? Use it with Edgy or choose from a variety templates."
+                  text="Already have a maintenance mode page? Use it with Portzilla or choose from a variety templates."
                 />
               </div>
             </div>
