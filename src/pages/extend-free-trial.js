@@ -28,7 +28,7 @@ const ExtendFreeTrialPage = () => (
           Extend your free trial
         </h1>
         <h3 className="is-size-5" css={{ color: colors.darkThemeWhite }}>
-          Have a Twitter account and want to extend your Portzilla free trial
+          Have a Twitter account and want to extend your Fortify free trial
           another 14 days? Follow these two steps and we'll make it happen.
         </h3>
       </div>
@@ -41,10 +41,10 @@ const ExtendFreeTrialPage = () => (
       >
         <Step number={1} />
         <p css={{ color: colors.darkThemeWhite }}>
-          We love feedback and use it to make Portzilla better. A minutes or two
+          We love feedback and use it to make Fortify better. A minutes or two
           of your time for a{" "}
           <a
-            href="https://www.cloudflare.com/apps/portzilla?leaveComment=true"
+            href="https://www.cloudflare.com/apps/fortify?leaveComment=true"
             target="_blank"
             rel="noopener"
           >
@@ -57,8 +57,8 @@ const ExtendFreeTrialPage = () => (
       <div css={{ display: "flex", alignItems: "center" }}>
         <Step number={2} />
         <p css={{ color: colors.darkThemeWhite }}>
-          Tweet something awesome about Portzilla and drop us a link to it
-          below. We'll normally reply within 1-3 hours!
+          Tweet something awesome about Fortify and drop us a link to it below.
+          We'll normally reply within 1-3 hours!
         </p>
       </div>
       <ExtendFreeTrialForm />

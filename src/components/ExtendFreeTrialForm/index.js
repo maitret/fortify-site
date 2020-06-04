@@ -42,7 +42,7 @@ export default () => {
             message = `Your free trial isn't activated.`
             break
           case "BAD_TWEET":
-            message = `Something looks a little off.  It should be an awesome tweet that mentions Portzilla.`
+            message = `Something looks a little off.  It should be an awesome tweet that mentions Fortify.`
             break
           default:
             message = `We didn't recognize that.`
@@ -65,9 +65,9 @@ export default () => {
           <a
             target="_blank"
             rel="noopener"
-            href="https://dash.cloudflare.com/?zone=apps/portzilla/install"
+            href="https://dash.cloudflare.com/?zone=apps/fortify/install"
           >
-            Portzilla app
+            Fortify app
           </a>{" "}
           on the Cloudflare dashboard.
         </label>
@@ -87,7 +87,7 @@ export default () => {
       <div className="field">
         <label className="label">Domain to extend trial on</label>
         <label className="sublabel">
-          Portzilla should be installed on this domain.
+          Fortify should be installed on this domain.
         </label>
         <div className="control has-icons-left has-icons-right">
           <input
@@ -124,7 +124,7 @@ export default () => {
       <div className="field">
         <label className="label">Link to Tweet</label>
         <label className="sublabel">
-          Link to your tweet that mentions Portzilla.
+          Link to your tweet that mentions Fortify.
         </label>
         <div className="control has-icons-left">
           <input

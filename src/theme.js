@@ -2,8 +2,8 @@ const hex2rgba = require("hex2rgba")
 
 const meta = {
   app: {
-    slug: "portzilla",
-    title: "Portzilla",
+    slug: "fortify",
+    title: "Fortify",
     description:
       "Offload your of your Maintenance Mode infrastucture so you can focus on more important things.",
     fontFamily: `'Orbitron', -apple-system, BlinkMacSystemFont, "Segoe UI"`,

@@ -12,7 +12,7 @@ const HomeFeaturesSection = () => {
       halign="center"
       direction="column"
       css={{
-        padding: "2.5rem 1.5rem;",
+        padding: "2.5rem 1.5rem",
         backgroundImage: "linear-gradient(180deg, transparent,#0b0d1b)",
       }}
     >
@@ -89,7 +89,7 @@ const HomeFeaturesSection = () => {
                 >
                   <HomeSquareItem
                     header="Intuitive UI"
-                    text="Set up Portzilla in a few minutes with our easy to use user interface"
+                    text="Set up Fortify in a few minutes with our easy to use user interface"
                     backgroundColor={colors.greyBlue}
                   >
                     <img
@@ -186,7 +186,7 @@ const HomeFeaturesSection = () => {
                   backgroundColor="transparent"
                   icon={<i className="fab fa-3x fa-html5"></i>}
                   header="Choose your template"
-                  text="Already have a maintenance mode page? Use it with Portzilla or choose from a variety templates."
+                  text="Already have a maintenance mode page? Use it with Fortify or choose from a variety templates."
                 />
               </div>
             </div>

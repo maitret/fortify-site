@@ -23,7 +23,7 @@ const BigCheckbox = ({ label }) => {
             <a
               target="_blank"
               rel="noopener"
-              href="https://www.networkchimp.com/tutorials/portzilla.html"
+              href="https://www.networkchimp.com/tutorials/fortify.html"
             >
               demo
             </a>

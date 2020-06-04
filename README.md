@@ -1,10 +1,10 @@
-# Portzilla
+# Fortify
 
-This project contains the source code for the website at [portzilla.networkchimp.com](https://portzilla.networkchimp.com)
+This project contains the source code for the website at [fortify.networkchimp.com](https://fortify.networkchimp.com)
 
 ## Product Issues
 
-If you're a [Portzilla](https://www.cloudflare.com/apps/portzilla) user and have any feedback or notice a bug with the app, create an issue here and we'll get right on it.
+If you're a [Fortify](https://www.cloudflare.com/apps/fortify) user and have any feedback or notice a bug with the app, create an issue here and we'll get right on it.
 
 ## Pull Requests
 
