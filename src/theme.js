@@ -4,14 +4,13 @@ const meta = {
   app: {
     slug: "fortify",
     title: "Fortify",
-    description:
-      "Offload your of your Maintenance Mode infrastucture so you can focus on more important things.",
+    description: "Managed security and custom headers for your site traffic",
     fontFamily: `'Orbitron', -apple-system, BlinkMacSystemFont, "Segoe UI"`,
   },
 }
 
 const colors = {
-  brand: "#6e77e5",
+  brand: "#0083b8",
   brandLight: "#8f96eb",
   codeVariable: "#3f9cd6",
   cloudflare: "#f4801f",
