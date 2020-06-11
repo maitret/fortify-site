@@ -14,11 +14,9 @@ import Exit from "./exit.svg"
 import CloudflareLogo from "./cloudflare.svg"
 import BackgroundLines from "./background-lines.svg"
 import MachineLearning from "./machine-learning.svg"
-import AppIcon from "./icon.svg"
 
 export {
   Themes,
-  AppIcon,
   SmallLogo,
   ComputerLogo,
   ReverseTime,

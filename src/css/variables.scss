@@ -2,7 +2,7 @@
 @import "../../node_modules/bulma/sass/utilities/functions";
 @import "../../node_modules/bulma/sass/utilities/derived-variables";
 
-$primary: #0083b8;
+$primary: #8c6598;
 $primary_invert: findColorInvert($primary);
 $primary_light: lighten($primary, 30%);
 $primary_dark: darken($primary, 30%);

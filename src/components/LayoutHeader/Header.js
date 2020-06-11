@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 import React, { useState } from "react"
 import { colors, media, meta } from "../../theme"
 import { useDrift } from "../Drift"
-import { AppIcon } from "../../svg"
+import AppIcon from "../../../static/icon.png"
 
-const Header = ({ location }) => {
+const Header = () => {
   const [openSidebar] = useDrift()
   const [menuOpened, setMenuOpened] = useState(false)
 
@@ -65,7 +65,7 @@ const Header = ({ location }) => {
             css={{
               color: "inherit",
               marginLeft: 10,
-              fontSize: "1.8rem",
+              fontSize: "2rem",
               [media.lessThan("large")]: {
                 marginTop: 1,
               },

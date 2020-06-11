@@ -3,7 +3,6 @@ import Mermaid from "react-mermaid2"
 import Flex from "../Flex"
 import VideoGallery from "../VideoGallery"
 import LargeText from "../HomeSectionHeader/LargeText"
-import BigCheckbox from "../BigCheckbox"
 import { CloudflareLogo, BackgroundLines } from "../../svg"
 import { media, colors, meta } from "../../theme"
 
@@ -43,16 +42,21 @@ const HomeHeroSection = () => (
         }}
       >
         <Mermaid
+          config={{
+            flowchart: {
+              useMaxWidth: true,
+            },
+          }}
           chart={`
-graph LR;
+graph TB;
 A[Browser] --> |request| B{Fortify}
 B --> |response| A
-B --> C[Add Request Headers]
+B --> C[Added Request Headers]
 style B fill:#5EE5FB,stroke:#333,stroke-width:3px
 style C fill:#CAFB87,stroke:#333,stroke-width:3px
 C --> D(GET yoursite.com)
 style D fill:#FFF,stroke:#333,stroke-width:1px
-D --> E[Add Response Headers]
+D --> E[Added Response Headers]
 style E fill:#FAC37E,stroke:#333,stroke-width:3px
 E --> B
 `}

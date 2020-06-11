@@ -4,14 +4,14 @@ const meta = {
   app: {
     slug: "fortify",
     title: "Fortify",
-    description: "Managed security and custom headers for your site traffic",
-    fontFamily: `'Orbitron', -apple-system, BlinkMacSystemFont, "Segoe UI"`,
+    description: "Add headers to your incoming HTTP traffic on any route",
+    fontFamily: `'Bree Serif', serif`,
   },
 }
 
 const colors = {
-  brand: "#0083b8",
-  brandLight: "#8f96eb",
+  brand: "#8c6598",
+  brandLight: "#a180a9",
   codeVariable: "#3f9cd6",
   cloudflare: "#f4801f",
   cloudflareLight: "hsl(28,90%,25%)",

@@ -24,30 +24,6 @@ const IndexPage = () => (
         background: "#000",
       }}
     >
-      <div
-        css={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingTop: "2rem",
-        }}
-      >
-        <div
-          css={{
-            padding: "1rem",
-            cursor: "default",
-            fontVariant: "small-caps",
-            border: `1px solid`,
-            borderColor: `#faad3f !important`,
-            color: `#faad3f !important`,
-            borderRadius: "6px",
-          }}
-        >
-          <i css={{ marginRight: "0.5rem" }} className="fas fa-award"></i>
-          Cloudflare Apps (2019): Most Downloaded DevOps solution
-        </div>
-      </div>
-
       <HomeHeroSection />
 
       <HomeSectionLayout>

@@ -1,0 +1,37 @@
+.activate-your-site {
+  .sublabel {
+    font-size: 12px;
+  }
+
+  label {
+    color: hsl(233, 15%, 67%);
+    margin-bottom: 0px !important;
+  }
+
+  input {
+    outline: none;
+    transition: 0.8s all;
+    background-color: rgba(26, 22, 22, 0);
+    border: 1px solid hsl(233, 15%, 67%);
+    color: #f2f4f8;
+    &::placeholder {
+      color: hsl(233, 15%, 67%);
+    }
+    &:focus {
+      border-color: #f2f4f8;
+      ~ .icon {
+        color: #f2f4f8 !important;
+      }
+    }
+  }
+  .field {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .icon {
+    color: hsl(233, 15%, 67%);
+    &:hover {
+      color: #f2f4f8 !important;
+    }
+  }
+}

@@ -27,7 +27,7 @@ const HomeFeaturesSection = () => {
       >
         <HomeSectionHeader
           title="# FEATURES"
-          text="Enable Maintenance Mode on any route and ensure your website never goes down"
+          text="Fine-grain HTTP header controls packed into powerful, route-based configurations"
         />
 
         <Flex
@@ -78,7 +78,7 @@ const HomeFeaturesSection = () => {
                     backgroundColor={colors.greyBlue}
                     icon={<i className="fas fa-3x fa-cogs"></i>}
                     header="Unlimited Configurations"
-                    text="Want to enable maintenance on multiple routes? Set up as many as you need."
+                    text="Want to add headers on several different routes? Set up as many as you need"
                   />
                 </div>
 
@@ -119,9 +119,9 @@ const HomeFeaturesSection = () => {
                 >
                   <HomeSquareItem
                     backgroundColor={colors.greyBlue}
-                    icon={<i className="fas fa-3x fa-wrench"></i>}
-                    header="Maintenance Mode"
-                    text="Enable maintenance mode on your entire website or only on select routes automatically after a chosen date or manually when you need it."
+                    icon={<i className="fas fa-3x fa-road"></i>}
+                    header="Route-based Configurations"
+                    text="Add headers to all incoming traffic or specify individual or glob-based routes"
                   />
                 </div>
 
@@ -133,9 +133,9 @@ const HomeFeaturesSection = () => {
                 >
                   <HomeSquareItem
                     backgroundColor={colors.greyBlue}
-                    icon={<i className="fas fa-3x fa-users-cog"></i>}
-                    header="Empower your team"
-                    text="Developers need access to a website to fix it.  Bypass maintenance mode with password and IP address-based whitelists to get back online fast."
+                    icon={<i className="fas fa-3x fa-people-arrows"></i>}
+                    header="Inheritance-based Configurations"
+                    text="Create powerful parent-child inheritance patterns where child routes inherit headers from parent routes"
                   />
                 </div>
               </div>
@@ -149,9 +149,15 @@ const HomeFeaturesSection = () => {
             >
               <HomeSquareItem
                 backgroundColor={colors.greyBlue}
-                icon={<i className="fas fa-3x fa-heartbeat"></i>}
-                header="Achieve 100% uptime"
-                text="Your visitors will always know you're online"
+                icon={<i className="fas fa-3x fa-asterisk"></i>}
+                header="Powerful glob matching"
+                text={
+                  <>
+                    Use powerful glob patterns like{" "}
+                    <em>*.yoursite.com/blog/*</em> to add headers on any
+                    matching traffic.
+                  </>
+                }
               />
             </div>
           </div>
@@ -176,17 +182,46 @@ const HomeFeaturesSection = () => {
               <div css={{ flex: 1 }}>
                 <HomeSquareItem
                   backgroundColor="transparent"
-                  icon={<i className="fas fa-3x fa-arrow-up"></i>}
-                  header="Always Up Mode"
-                  text="Render a page of your choice whenever your website is experiencing unexpected downtime (500-level errors) so visitors know you're still there."
+                  icon={<i className="fas fa-3x fa-shield-alt"></i>}
+                  header="Managed Security Headers"
+                  text={
+                    <div>
+                      Fortify your site with one-click configurable security
+                      headers:
+                      <ul css={{ marginTop: "0.5rem" }}>
+                        {[
+                          "Content Security Policy",
+                          "HTTP Strict Transport Security",
+                          "Referrer Policy",
+                          "XSS Protection",
+                          "MIME type sniffing",
+                          "Browser caching",
+                          "Site embeddability",
+                          "DNS prefetching",
+                          "Fingerprinting",
+                        ].map(text => (
+                          <li
+                            css={{
+                              listStyleType: "square",
+                              marginLeft: "2.2rem",
+                              marginBottom: "0.2rem",
+                            }}
+                            key={text}
+                          >
+                            {text}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  }
                 />
               </div>
               <div css={{ flex: 1 }}>
                 <HomeSquareItem
                   backgroundColor="transparent"
-                  icon={<i className="fab fa-3x fa-html5"></i>}
-                  header="Choose your template"
-                  text="Already have a maintenance mode page? Use it with Fortify or choose from a variety templates."
+                  icon={<i className="fas fa-3x fa-id-badge"></i>}
+                  header="Enforce HTTPS"
+                  text="Redirect insecure HTTP requests to HTTPS and forbid insecure POST data in one click"
                 />
               </div>
             </div>

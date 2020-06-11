@@ -1,7 +1,7 @@
 import React from "react"
 import PricingForm from "./PricingForm"
 import { colors, meta } from "../../theme"
-import { AppIcon } from "../../svg"
+import AppIcon from "../../../static/icon.png"
 
 import "./PaymentModal.scss"
 

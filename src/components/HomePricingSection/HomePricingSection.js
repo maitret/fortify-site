@@ -108,10 +108,9 @@ const HomePricingSection = () => {
             title="Features"
             contentItems={[
               "Unlimited route configurations",
-              "Always up mode - never go down!",
-              "Schedulable maintenance mode",
-              "IP/Password-based bypasses",
-              "Flexible template engine",
+              "Fine-grain HTTP header control",
+              "Managed security headers",
+              "Enforce HTTPS",
             ]}
             footer={<span css={{ opacity: 0 }}>.</span>}
             customStyles={{
@@ -126,7 +125,6 @@ const HomePricingSection = () => {
             title="Unlimited"
             contentItems={[
               "∞",
-              <img alt="checkmark" css={{ width: "14px" }} src={Check} />,
               <img alt="checkmark" css={{ width: "14px" }} src={Check} />,
               <img alt="checkmark" css={{ width: "14px" }} src={Check} />,
               <img alt="checkmark" css={{ width: "14px" }} src={Check} />,
