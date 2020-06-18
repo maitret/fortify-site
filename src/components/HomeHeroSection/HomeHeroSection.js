@@ -51,12 +51,12 @@ const HomeHeroSection = () => (
 graph TB;
 A[Browser] --> |request| B{Fortify}
 B --> |response| A
-B --> C[Added Request Headers]
+B --> C[Modified Request Headers]
 style B fill:#5EE5FB,stroke:#333,stroke-width:3px
 style C fill:#CAFB87,stroke:#333,stroke-width:3px
 C --> D(GET yoursite.com)
 style D fill:#FFF,stroke:#333,stroke-width:1px
-D --> E[Added Response Headers]
+D --> E[Modified Response Headers and Code]
 style E fill:#FAC37E,stroke:#333,stroke-width:3px
 E --> B
 `}

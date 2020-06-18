@@ -27,7 +27,7 @@ const HomeFeaturesSection = () => {
       >
         <HomeSectionHeader
           title="# FEATURES"
-          text="Fine-grain HTTP header controls packed into powerful, route-based configurations"
+          text="Fine-grain header and code control packed into powerful, route-based configurations"
         />
 
         <Flex
@@ -78,7 +78,7 @@ const HomeFeaturesSection = () => {
                     backgroundColor={colors.greyBlue}
                     icon={<i className="fas fa-3x fa-cogs"></i>}
                     header="Unlimited Configurations"
-                    text="Want to add headers on several different routes? Set up as many as you need"
+                    text="Want to add or remove headers on several different routes? Set up as many as you need"
                   />
                 </div>
 
@@ -121,7 +121,7 @@ const HomeFeaturesSection = () => {
                     backgroundColor={colors.greyBlue}
                     icon={<i className="fas fa-3x fa-road"></i>}
                     header="Route-based Configurations"
-                    text="Add headers to all incoming traffic or specify individual or glob-based routes"
+                    text="Add or remove headers on all incoming traffic or specify individual or glob-based routes"
                   />
                 </div>
 
@@ -133,9 +133,9 @@ const HomeFeaturesSection = () => {
                 >
                   <HomeSquareItem
                     backgroundColor={colors.greyBlue}
-                    icon={<i className="fas fa-3x fa-people-arrows"></i>}
-                    header="Inheritance-based Configurations"
-                    text="Create powerful parent-child inheritance patterns where child routes inherit headers from parent routes"
+                    icon={<i className="fas fa-3x fa-syringe"></i>}
+                    header="Got <script>?"
+                    text="Inject as many scripts as you need on any wildcard-compatible route on your doamin"
                   />
                 </div>
               </div>
@@ -154,8 +154,8 @@ const HomeFeaturesSection = () => {
                 text={
                   <>
                     Use powerful glob patterns like{" "}
-                    <em>*.yoursite.com/blog/*</em> to add headers on any
-                    matching traffic.
+                    <em>*.yoursite.com/blog/*</em> to add or remove headers on
+                    any matching traffic.
                   </>
                 }
               />

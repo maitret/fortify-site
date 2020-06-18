@@ -4,7 +4,8 @@ const meta = {
   app: {
     slug: "fortify",
     title: "Fortify",
-    description: "Add headers to your incoming HTTP traffic on any route",
+    description:
+      "Add JavaScript and manipulate HTTP headers on any part of your domain.  Compatible with any backend.",
     fontFamily: `'Bree Serif', serif`,
   },
 }
